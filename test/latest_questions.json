@@ -1,0 +1,2223 @@
+[
+  {
+    "tags": [
+      "advice",
+      "javascript",
+      "webassembly",
+      "web-development-server"
+    ],
+    "owner": {
+      "account_id": 46713455, 
+      "reputation": 9,
+      "user_id": 32936007,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/ac4a3973e4fa8ea836d095fe599c369c?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Femi",
+      "link": "https://stackoverflow.com/users/32936007/femi"
+    },
+    "is_answered": false,
+    "view_count": 16,
+    "answer_count": 0,
+    "score": -1,
+    "last_activity_date": 1784004249,
+    "creation_date": 1784003175,
+    "last_edit_date": 1784004249,
+    "question_id": 79980516,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980516/why-would-one-use-webassembly-in-the-backend",
+    "title": "Why would one use WebAssembly in the Backend?"
+  },
+  {
+    "tags": [
+      "pyspark",
+      "azure-sql-database",
+      "pyodbc",
+      "microsoft-fabric"
+    ],
+    "owner": {
+      "account_id": 18572132,
+      "reputation": 1,
+      "user_id": 13533717,
+      "user_type": "registered",
+      "profile_image": "https://lh3.googleusercontent.com/-Z0kRGm98cvA/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckDFzeYi0vZ6S6oEoeF96lp6aaoPA/s256-rj/photo.jpg",
+      "display_name": "Abhishek Gaurav",
+      "link": "https://stackoverflow.com/users/13533717/abhishek-gaurav"
+    },
+    "is_answered": false,
+    "view_count": 8,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1784002919,
+    "creation_date": 1784002242,
+    "last_edit_date": 1784002919,
+    "question_id": 79980513,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980513/microsoft-fabric-notebook-works-manually-but-fails-in-pipeline-at-notebookutils",
+    "title": "Microsoft Fabric Notebook works manually but fails in Pipeline at notebookutils.connections.getCredential() with HTTP 500"
+  },
+  {
+    "tags": [
+      "big-o",
+      "nested-loops"
+    ],
+    "owner": {
+      "account_id": 16693043,
+      "reputation": 1,
+      "user_id": 12065111,
+      "user_type": "registered",
+      "profile_image": "https://lh3.googleusercontent.com/a-/AAuE7mAS4C_Fwi6LAmn4UNLatR0u2BjuH7nC88AHMSLEOQ=k-s256",
+      "display_name": "liam fieder",
+      "link": "https://stackoverflow.com/users/12065111/liam-fieder"
+    },
+    "is_answered": false,
+    "view_count": 22,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1784004176,
+    "creation_date": 1784001880,
+    "last_edit_date": 1784004176,
+    "question_id": 79980510,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980510/big-o-notation-for-a-nested-loop-where-it-doubles-every-iteration",
+    "title": "Big O Notation for a nested loop where it doubles every iteration"
+  },
+  {
+    "tags": [
+      "c",
+      "posix",
+      "root"
+    ],
+    "owner": {
+      "account_id": 24836465,
+      "reputation": 21,
+      "user_id": 19961644,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/ubHmF.gif?s=256",
+      "display_name": "KC3WMI",
+      "link": "https://stackoverflow.com/users/19961644/kc3wmi"
+    },
+    "is_answered": false,
+    "view_count": 38,
+    "answer_count": 0,
+    "score": 2,
+    "last_activity_date": 1784000458,
+    "creation_date": 1783999568,
+    "last_edit_date": 1784000458,
+    "question_id": 79980504,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980504/how-to-check-if-my-program-was-run-with-sudo",
+    "title": "How to check if my program was run with sudo?"
+  },
+  {
+    "tags": [
+      "r",
+      "matrix",
+      "rstudio"
+    ],
+    "owner": {
+      "account_id": 46713074,
+      "reputation": 1,
+      "user_id": 32935827,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/121f8bc358fd7cdf4d3a1444db6d6b8a?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Micah Jay Strike",
+      "link": "https://stackoverflow.com/users/32935827/micah-jay-strike"
+    },
+    "is_answered": false,
+    "view_count": 13,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783997504,
+    "creation_date": 1783997312,
+    "last_edit_date": 1783997504,
+    "question_id": 79980497,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980497/simprof-will-only-run-on-certain-subsets-of-my-community-matrix-data",
+    "title": "SIMPROF will only run on certain subsets of my community matrix data"
+  },
+  {
+    "tags": [
+      "advice",
+      "c++",
+      "clang",
+      "language-lawyer",
+      "crtp"
+    ],
+    "owner": {
+      "account_id": 46712750,
+      "reputation": 1,
+      "user_id": 32935687,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/438d283c7284d504fd5df83a92bfb9f4?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "user32935687",
+      "link": "https://stackoverflow.com/users/32935687/user32935687"
+    },
+    "is_answered": false,
+    "view_count": 48,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783995540,
+    "creation_date": 1783995526,
+    "last_edit_date": 1783995540,
+    "question_id": 79980494,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980494/clang-rejects-constexpr-construction-through-inherited-crtp-constructors-that-gc",
+    "title": "Clang rejects constexpr construction through inherited CRTP constructors that GCC accepts"
+  },
+  {
+    "tags": [
+      "reactjs",
+      "next.js",
+      "hydration"
+    ],
+    "owner": {
+      "account_id": 27940574,
+      "reputation": 9,
+      "user_id": 21336690,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/b141e3f6f98ba6f46fa3ff56f3d16da7?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Archy",
+      "link": "https://stackoverflow.com/users/21336690/archy"
+    },
+    "is_answered": false,
+    "view_count": 26,
+    "closed_date": 1784002687,
+    "answer_count": 1,
+    "score": -1,
+    "last_activity_date": 1783996367,
+    "creation_date": 1783995090,
+    "question_id": 79980493,
+    "link": "https://stackoverflow.com/questions/79980493/changing-code-causes-hydration-issue-nextjs-turbopack",
+    "closed_reason": "Duplicate",
+    "title": "Changing code causes hydration Issue Nextjs/Turbopack"
+  },
+  {
+    "tags": [
+      "partitioning",
+      "partition",
+      "dolphindb"
+    ],
+    "owner": {
+      "account_id": 44689411,
+      "reputation": 27,
+      "user_id": 31884577,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/8f63c62b508d03d157a84aa5efba16cd?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Olivia",
+      "link": "https://stackoverflow.com/users/31884577/olivia"
+    },
+    "is_answered": false,
+    "view_count": 14,
+    "answer_count": 0,
+    "score": -1,
+    "last_activity_date": 1783994385,
+    "creation_date": 1783994385,
+    "question_id": 79980490,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980490/partitioning-for-minute-level-factors-monthly-vs-daily-value-partition",
+    "title": "Partitioning for minute level factors: monthly vs daily VALUE partition"
+  },
+  {
+    "tags": [
+      "javascript",
+      "ios",
+      "facebook",
+      "webview",
+      "deep-linking"
+    ],
+    "owner": {
+      "account_id": 32437500,
+      "reputation": 1,
+      "user_id": 25198501,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/b46a3523d18e80b981fc658200376ea4?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "shunpeng gao",
+      "link": "https://stackoverflow.com/users/25198501/shunpeng-gao"
+    },
+    "is_answered": false,
+    "view_count": 16,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783994155,
+    "creation_date": 1783994155,
+    "question_id": 79980489,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980489/facebook-ios-in-app-browser-converts-a-page-url-to-fb-profile-but-shows-a-blan",
+    "title": "Facebook iOS in-app browser converts a Page URL to fb://profile but shows a blank page"
+  },
+  {
+    "tags": [
+      "c++",
+      "pointers",
+      "polymorphism",
+      "operator-overloading"
+    ],
+    "owner": {
+      "account_id": 4515378,
+      "reputation": 716,
+      "user_id": 3670403,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_image": "https://www.gravatar.com/avatar/34b5096ba2f7c78c0d010fa2353e605c?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "zachThePerson",
+      "link": "https://stackoverflow.com/users/3670403/zachtheperson"
+    },
+    "is_answered": true,
+    "view_count": 66,
+    "accepted_answer_id": 79980502,
+    "answer_count": 3,
+    "score": 0,
+    "last_activity_date": 1784002679,
+    "creation_date": 1783993242,
+    "last_edit_date": 1783995847,
+    "question_id": 79980487,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980487/c-how-to-overload-operator-when-using-pointers-to-polymorphic-objects",
+    "title": "C++ How to overload [ ] operator when using pointers to polymorphic objects?"
+  },
+  {
+    "tags": [
+      "advice"
+    ],
+    "owner": {
+      "account_id": 46712618,
+      "reputation": 1,
+      "user_id": 32935635,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/a9f9601fc2031b2f8757f3b3af9b6e21?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Joanna Savage",
+      "link": "https://stackoverflow.com/users/32935635/joanna-savage"
+    },
+    "is_answered": false,
+    "view_count": 41,
+    "closed_date": 1783994520,
+    "answer_count": 1,
+    "score": -3,
+    "last_activity_date": 1783994530,
+    "creation_date": 1783987527,
+    "last_edit_date": 1783994530,
+    "question_id": 79980481,
+    "link": "https://stackoverflow.com/questions/79980481/having-trouble-finding-out-how-to-decode",
+    "closed_reason": "Needs details or clarity",
+    "title": "Having trouble finding out how to decode"
+  },
+  {
+    "tags": [
+      "c++",
+      "templates",
+      "smart-pointers"
+    ],
+    "owner": {
+      "account_id": 1132433,
+      "reputation": 2217,
+      "user_id": 1118211,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_image": "https://www.gravatar.com/avatar/df92ca29e66dce1870a816ac0e13053b?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "ramgorur",
+      "link": "https://stackoverflow.com/users/1118211/ramgorur"
+    },
+    "is_answered": false,
+    "view_count": 48,
+    "answer_count": 0,
+    "score": -2,
+    "last_activity_date": 1783991514,
+    "creation_date": 1783987401,
+    "last_edit_date": 1783991514,
+    "question_id": 79980479,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980479/use-stdunique-ptrt-based-on-the-fundamentality-of-t",
+    "title": "Use std::unique_ptr&lt;T&gt; based on the fundamentality of T"
+  },
+  {
+    "tags": [
+      "bioinformatics",
+      "deconvolution"
+    ],
+    "owner": {
+      "account_id": 46527401,
+      "reputation": 1,
+      "user_id": 32829654,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/c949fb179c19b25bd92db4fd9fd35b6b?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Cozza Francesco",
+      "link": "https://stackoverflow.com/users/32829654/cozza-francesco"
+    },
+    "is_answered": false,
+    "view_count": 24,
+    "closed_date": 1784003229,
+    "answer_count": 1,
+    "score": -1,
+    "last_activity_date": 1784002886,
+    "creation_date": 1783985661,
+    "last_edit_date": 1783987348,
+    "question_id": 79980475,
+    "link": "https://stackoverflow.com/questions/79980475/cibersortx-fractions-hires-which-mixture-sigmatrix-combination-is-actually-used",
+    "closed_reason": "Not suitable for this site",
+    "title": "CIBERSORTx Fractions/HiRes: which mixture/sigmatrix combination is actually used internally with S-mode batch correction?"
+  },
+  {
+    "tags": [
+      "autodesk-forge",
+      "autodesk-webhooks"
+    ],
+    "owner": {
+      "account_id": 46712374,
+      "reputation": 1,
+      "user_id": 32935515,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/6276da4409504434a14bb91354a6a253?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Tyler Shannon",
+      "link": "https://stackoverflow.com/users/32935515/tyler-shannon"
+    },
+    "is_answered": false,
+    "view_count": 32,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783980919,
+    "creation_date": 1783980919,
+    "question_id": 79980470,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980470/webhook-using-buildingconnecteds-opportunity-created-1-0-event-stopped-working",
+    "title": "Webhook using BuildingConnected&#39;s opportunity.created-1.0 event stopped working as expected"
+  },
+  {
+    "tags": [
+      "kotlin",
+      "random"
+    ],
+    "owner": {
+      "account_id": 311307,
+      "reputation": 11864,
+      "user_id": 624814,
+      "user_type": "registered",
+      "accept_rate": 79,
+      "profile_image": "https://www.gravatar.com/avatar/3a863d626cfeba2251bdf48ee8b38b7a?s=256&d=identicon&r=PG",
+      "display_name": "SMBiggs",
+      "link": "https://stackoverflow.com/users/624814/smbiggs"
+    },
+    "is_answered": false,
+    "view_count": 100,
+    "answer_count": 1,
+    "score": 0,
+    "last_activity_date": 1784003612,
+    "creation_date": 1783975770,
+    "last_edit_date": 1783976376,
+    "question_id": 79980468,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980468/generate-random-number-from-0-to-1-inclusive",
+    "title": "Generate random number from 0 to 1 inclusive"
+  },
+  {
+    "tags": [
+      "c",
+      "msvcrt"
+    ],
+    "owner": {
+      "account_id": 60124,
+      "reputation": 91520,
+      "user_id": 179715,
+      "user_type": "registered",
+      "accept_rate": 80,
+      "profile_image": "https://www.gravatar.com/avatar/e240f1a5bb197450dfb8934dd55d9e3a?s=256&d=identicon&r=PG",
+      "display_name": "jamesdlin",
+      "link": "https://stackoverflow.com/users/179715/jamesdlin"
+    },
+    "is_answered": false,
+    "view_count": 66,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783975404,
+    "creation_date": 1783975404,
+    "question_id": 79980465,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980465/is-there-any-way-to-make-microsofts-swprintf-implementation-standards-conformin",
+    "title": "Is there any way to make Microsoft&#39;s swprintf implementation standards-conforming?"
+  },
+  {
+    "tags": [
+      "google-cloud-platform"
+    ],
+    "owner": {
+      "account_id": 11332810,
+      "reputation": 2160,
+      "user_id": 8309806,
+      "user_type": "registered",
+      "accept_rate": 60,
+      "profile_image": "https://i.sstatic.net/jtHVOU1F.png?s=256",
+      "display_name": "Avi",
+      "link": "https://stackoverflow.com/users/8309806/avi"
+    },
+    "is_answered": false,
+    "view_count": 35,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783973955,
+    "creation_date": 1783973955,
+    "question_id": 79980461,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980461/gcp-showing-app-brand-name-verification-error",
+    "title": "GCP showing app brand name verification error"
+  },
+  {
+    "tags": [
+      "python",
+      "scipy",
+      "pearson"
+    ],
+    "owner": {
+      "account_id": 11189819,
+      "reputation": 1159,
+      "user_id": 8223979,
+      "user_type": "registered",
+      "accept_rate": 80,
+      "profile_image": "https://www.gravatar.com/avatar/2b9d46c642ce3d52ef359434c06671a2?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Caterina",
+      "link": "https://stackoverflow.com/users/8223979/caterina"
+    },
+    "is_answered": false,
+    "view_count": 40,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783973182,
+    "creation_date": 1783972698,
+    "last_edit_date": 1783973182,
+    "question_id": 79980456,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980456/how-to-properly-deal-with-nan-values-when-using-scipy-stats-pearsonr",
+    "title": "How to properly deal with nan values when using scipy.stats.pearsonr?"
+  },
+  {
+    "tags": [
+      "java",
+      "module",
+      "jcifs"
+    ],
+    "owner": {
+      "account_id": 7577131,
+      "reputation": 169,
+      "user_id": 5749128,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/miN5A.jpg?s=256",
+      "display_name": "AlexHomeBrew",
+      "link": "https://stackoverflow.com/users/5749128/alexhomebrew"
+    },
+    "is_answered": false,
+    "view_count": 29,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783972465,
+    "creation_date": 1783972465,
+    "question_id": 79980453,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980453/cannot-access-class-org-slf4j-loggerfactory-because-module-jcifs-does-not-read-u",
+    "title": "cannot access class org.slf4j.LoggerFactory because module jcifs does not read unnamed module"
+  },
+  {
+    "tags": [
+      "bash",
+      "awk",
+      "sed"
+    ],
+    "owner": {
+      "account_id": 46711686,
+      "reputation": 53,
+      "user_id": 32935222,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/0295ad11d546ad8812b4f8f5f12a0287?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "blindwillie31",
+      "link": "https://stackoverflow.com/users/32935222/blindwillie31"
+    },
+    "is_answered": true,
+    "view_count": 104,
+    "accepted_answer_id": 79980454,
+    "answer_count": 3,
+    "score": 5,
+    "last_activity_date": 1784001690,
+    "creation_date": 1783971867,
+    "last_edit_date": 1784001690,
+    "question_id": 79980449,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980449/remove-multiple-occurrences-of-similar-lines-except-the-last",
+    "title": "Remove multiple occurrences of similar lines except the last"
+  },
+  {
+    "tags": [
+      "c++",
+      "c++23",
+      "perfect-forwarding"
+    ],
+    "owner": {
+      "account_id": 15634555,
+      "reputation": 3727,
+      "user_id": 11279879,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/ufGay.png?s=256",
+      "display_name": "Dr. Gut",
+      "link": "https://stackoverflow.com/users/11279879/dr-gut"
+    },
+    "is_answered": false,
+    "view_count": 88,
+    "answer_count": 1,
+    "score": 0,
+    "last_activity_date": 1784004266,
+    "creation_date": 1783971823,
+    "question_id": 79980448,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980448/why-does-stdforward-like-not-add-volatile",
+    "title": "Why does std::forward_like not add volatile?"
+  },
+  {
+    "tags": [
+      "advice",
+      "firebase"
+    ],
+    "owner": {
+      "account_id": 46711695,
+      "reputation": 1,
+      "user_id": 32935223,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/8a770c14bfa81a21cbcb74f76df4d37e?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "AlanBaena",
+      "link": "https://stackoverflow.com/users/32935223/alanbaena"
+    },
+    "is_answered": false,
+    "view_count": 66,
+    "closed_date": 1783969908,
+    "answer_count": 0,
+    "score": -3,
+    "last_activity_date": 1783971186,
+    "creation_date": 1783969791,
+    "last_edit_date": 1783971186,
+    "question_id": 79980445,
+    "link": "https://stackoverflow.com/questions/79980445/creating-a-website-and-understanding-firebase",
+    "closed_reason": "Not suitable for this site",
+    "title": "creating a website and understanding Firebase"
+  },
+  {
+    "tags": [
+      "c#",
+      "asp.net-mvc"
+    ],
+    "owner": {
+      "account_id": 45201278,
+      "reputation": 1,
+      "user_id": 32145972,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/951806d7150caf12bee5de40dd36d825?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "yummybuns",
+      "link": "https://stackoverflow.com/users/32145972/yummybuns"
+    },
+    "is_answered": false,
+    "view_count": 49,
+    "closed_date": 1783969170,
+    "answer_count": 0,
+    "score": -4,
+    "last_activity_date": 1783969546,
+    "creation_date": 1783968210,
+    "last_edit_date": 1783969546,
+    "question_id": 79980439,
+    "link": "https://stackoverflow.com/questions/79980439/updating-cshtml-page-without-reloading-it",
+    "closed_reason": "Needs details or clarity",
+    "title": "Updating Cshtml page without reloading it"
+  },
+  {
+    "tags": [
+      "time-series",
+      "apache-iotdb"
+    ],
+    "owner": {
+      "account_id": 30237173,
+      "reputation": 41,
+      "user_id": 23173211,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/FcaFO.jpg?s=256",
+      "display_name": "Jiangang Bai",
+      "link": "https://stackoverflow.com/users/23173211/jiangang-bai"
+    },
+    "is_answered": false,
+    "view_count": 29,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783969480,
+    "creation_date": 1783965985,
+    "last_edit_date": 1783969480,
+    "question_id": 79980434,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980434/session-window-returns-a-window-whose-end-is-earlier-than-its-start",
+    "title": "SESSION window returns a window whose end is earlier than its start"
+  },
+  {
+    "tags": [
+      "c#",
+      "sql-server",
+      "asp.net-mvc",
+      "geometry"
+    ],
+    "owner": {
+      "account_id": 46711277,
+      "reputation": 9,
+      "user_id": 32935026,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/2701db003d69a41a41f020337cb2b18f?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "John Haasbeek",
+      "link": "https://stackoverflow.com/users/32935026/john-haasbeek"
+    },
+    "is_answered": false,
+    "view_count": 55,
+    "closed_date": 1783965676,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783969774,
+    "creation_date": 1783964480,
+    "last_edit_date": 1783969774,
+    "question_id": 79980430,
+    "link": "https://stackoverflow.com/questions/79980430/microsoft-sqlserver-types-works-in-console-app-but-not-in-web-application",
+    "closed_reason": "Not suitable for this site",
+    "title": "Microsoft.SqlServer.Types works in Console App but not in Web Application"
+  },
+  {
+    "tags": [
+      "spring-boot",
+      "maven",
+      "grpc",
+      "grpc-java"
+    ],
+    "owner": {
+      "account_id": 19987292,
+      "reputation": 512,
+      "user_id": 14649181,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/e1824039b36e5ed66a9604ff278b4735?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Oskar",
+      "link": "https://stackoverflow.com/users/14649181/oskar"
+    },
+    "is_answered": false,
+    "view_count": 23,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783963445,
+    "creation_date": 1783963445,
+    "question_id": 79980428,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980428/importing-proto-files-from-external-module-for-spring-boot-grpc",
+    "title": "Importing proto files from external module for Spring boot gRPC"
+  },
+  {
+    "tags": [
+      "xml",
+      "integration",
+      "tally",
+      "tdl"
+    ],
+    "owner": {
+      "account_id": 19127418,
+      "reputation": 11,
+      "user_id": 13970106,
+      "user_type": "registered",
+      "profile_image": "https://lh5.googleusercontent.com/-pxPQNVRmACA/AAAAAAAAAAI/AAAAAAAAAAA/AMZuucl5Jy9_d_OSa397_l0YfPPDU3XzFQ/s256-rj/photo.jpg",
+      "display_name": "Harsh Sharma",
+      "link": "https://stackoverflow.com/users/13970106/harsh-sharma"
+    },
+    "is_answered": false,
+    "view_count": 30,
+    "answer_count": 0,
+    "score": 1,
+    "last_activity_date": 1783962485,
+    "creation_date": 1783962485,
+    "question_id": 79980425,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980425/set-bank-reconciliation-date-in-tally-prime",
+    "title": "Set Bank Reconciliation Date in Tally Prime"
+  },
+  {
+    "tags": [
+      "best-practices",
+      "save",
+      "game-development",
+      "godot4"
+    ],
+    "owner": {
+      "account_id": 45638916,
+      "reputation": 1,
+      "user_id": 32850372,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/xVtIYbOi.png?s=256",
+      "display_name": "FrenchToastAndCoffee",
+      "link": "https://stackoverflow.com/users/32850372/frenchtoastandcoffee"
+    },
+    "is_answered": false,
+    "view_count": 49,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783962260,
+    "creation_date": 1783961014,
+    "last_edit_date": 1783962260,
+    "question_id": 79980418,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980418/i-am-trying-to-make-a-system-that-saves-data-across-scenes-in-godot-4-i-have-tw",
+    "title": "I am trying to make a system that saves data across scenes in Godot 4. I have two possible approaches. Which is better?"
+  },
+  {
+    "tags": [
+      "encryption",
+      "twofish"
+    ],
+    "owner": {
+      "account_id": 29156871,
+      "reputation": 1,
+      "user_id": 22336453,
+      "user_type": "registered",
+      "profile_image": "https://lh3.googleusercontent.com/a/AAcHTtdT5L7Dn6y9kGzIDlt2SbiPYvROSPPRo0WW54zDHQywmg=k-s256",
+      "display_name": "Zach Stear",
+      "link": "https://stackoverflow.com/users/22336453/zach-stear"
+    },
+    "is_answered": false,
+    "view_count": 76,
+    "closed_date": 1783962157,
+    "answer_count": 0,
+    "score": -6,
+    "last_activity_date": 1783969551,
+    "creation_date": 1783960796,
+    "last_edit_date": 1783969551,
+    "question_id": 79980417,
+    "link": "https://stackoverflow.com/questions/79980417/reverse-engineering-how-site-handles-short-encryption-keys",
+    "closed_reason": "Not suitable for this site",
+    "title": "Reverse engineering how site handles short encryption keys"
+  },
+  {
+    "tags": [
+      "c#",
+      ".net",
+      "visual-studio",
+      "visual-studio-code",
+      "mscorlib"
+    ],
+    "owner": {
+      "account_id": 15993104,
+      "reputation": 137,
+      "user_id": 11541740,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/1609d1ef1007f409ee5e3f89060f2a9c?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Kirikan",
+      "link": "https://stackoverflow.com/users/11541740/kirikan"
+    },
+    "is_answered": false,
+    "view_count": 45,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783960328,
+    "creation_date": 1783960087,
+    "last_edit_date": 1783960328,
+    "question_id": 79980414,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980414/using-custom-framework-assemblies-in-a-net-project",
+    "title": "Using custom framework assemblies in a .NET project"
+  },
+  {
+    "tags": [
+      "r",
+      "factor-analysis",
+      "regularized"
+    ],
+    "owner": {
+      "account_id": 46553511,
+      "reputation": 1,
+      "user_id": 32844892,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/7aff8bebe331c80a69a2eb6d18a01254?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "borski56",
+      "link": "https://stackoverflow.com/users/32844892/borski56"
+    },
+    "is_answered": false,
+    "view_count": 45,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783959683,
+    "creation_date": 1783959683,
+    "question_id": 79980413,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980413/how-to-calculate-factor-scores-after-regularized-exploratory-factor-analysis",
+    "title": "How to Calculate Factor Scores After Regularized Exploratory Factor Analysis?"
+  },
+  {
+    "tags": [
+      "python",
+      "pytorch",
+      "pytorch-dataloader",
+      "pytorch-geometric"
+    ],
+    "owner": {
+      "account_id": 45955721,
+      "reputation": 45,
+      "user_id": 32537075,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/03a79642ccc47de61d9eff66a983da5a?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "User240326",
+      "link": "https://stackoverflow.com/users/32537075/user240326"
+    },
+    "is_answered": false,
+    "view_count": 45,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783958793,
+    "creation_date": 1783958793,
+    "question_id": 79980408,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980408/how-to-create-a-custom-dataset-and-dataloader-in-pytorch-geometric-for-files-wit",
+    "title": "How to create a custom dataset and dataloader in pytorch geometric for files with different dimensions?"
+  },
+  {
+    "tags": [
+      "docker"
+    ],
+    "owner": {
+      "account_id": 20901952,
+      "reputation": 3,
+      "user_id": 15354874,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/8119b7895ee863e2ccc0b05a6b8065eb?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "MZX",
+      "link": "https://stackoverflow.com/users/15354874/mzx"
+    },
+    "is_answered": false,
+    "view_count": 60,
+    "closed_date": 1783969538,
+    "answer_count": 0,
+    "score": -4,
+    "last_activity_date": 1783959664,
+    "creation_date": 1783958443,
+    "last_edit_date": 1783959664,
+    "question_id": 79980405,
+    "link": "https://stackoverflow.com/questions/79980405/is-my-dockerfile-copying-files-to-non-root-user",
+    "closed_reason": "Not suitable for this site",
+    "title": "Is my Dockerfile copying files to non-root user?"
+  },
+  {
+    "tags": [
+      "jackhenry-jxchange"
+    ],
+    "owner": {
+      "account_id": 46263581,
+      "reputation": 1,
+      "user_id": 32691541,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/1ab060dbddd3f43ef031eeca0c2a5568?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Harshwardhan Raghu",
+      "link": "https://stackoverflow.com/users/32691541/harshwardhan-raghu"
+    },
+    "is_answered": false,
+    "view_count": 43,
+    "closed_date": 1783998987,
+    "answer_count": 1,
+    "score": -5,
+    "last_activity_date": 1783958461,
+    "creation_date": 1783957426,
+    "last_edit_date": 1783958461,
+    "question_id": 79980402,
+    "link": "https://stackoverflow.com/questions/79980402/outgoing-wiretrnisoadd",
+    "closed_reason": "Needs details or clarity",
+    "title": "Outgoing WireTrnISOAdd"
+  },
+  {
+    "tags": [
+      "powerbi",
+      "dax"
+    ],
+    "owner": {
+      "account_id": 7395314,
+      "reputation": 349,
+      "user_id": 6029385,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/4671e5f75120dcb6e4f5bc851540caa9?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "amsackett",
+      "link": "https://stackoverflow.com/users/6029385/amsackett"
+    },
+    "is_answered": true,
+    "view_count": 56,
+    "answer_count": 1,
+    "score": 1,
+    "last_activity_date": 1783960287,
+    "creation_date": 1783955876,
+    "last_edit_date": 1783960287,
+    "question_id": 79980392,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980392/power-bi-not-merging-data-correctly",
+    "title": "Power BI not merging data correctly"
+  },
+  {
+    "tags": [
+      "git",
+      "github"
+    ],
+    "owner": {
+      "account_id": 46629787,
+      "reputation": 9,
+      "user_id": 32889304,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/3ff7fabd28c4ad77719842ee57e8f46f?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Friedrich Novak",
+      "link": "https://stackoverflow.com/users/32889304/friedrich-novak"
+    },
+    "is_answered": false,
+    "view_count": 52,
+    "closed_date": 1783957065,
+    "answer_count": 0,
+    "score": -5,
+    "last_activity_date": 1783961099,
+    "creation_date": 1783955739,
+    "question_id": 79980391,
+    "link": "https://stackoverflow.com/questions/79980391/github-contributions",
+    "closed_reason": "Duplicate",
+    "title": "Github contributions"
+  },
+  {
+    "tags": [
+      "artifactory"
+    ],
+    "owner": {
+      "account_id": 20871456,
+      "reputation": 13,
+      "user_id": 15331301,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/834bd5cca32c2e758dddf6f1f13babf2?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "justin&#39;s work account",
+      "link": "https://stackoverflow.com/users/15331301/justins-work-account"
+    },
+    "is_answered": false,
+    "view_count": 36,
+    "answer_count": 0,
+    "score": -4,
+    "last_activity_date": 1783969172,
+    "creation_date": 1783955347,
+    "last_edit_date": 1783969172,
+    "question_id": 79980389,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980389/projects-include-virtuals-that-locals-remotes-are-assigned-to",
+    "title": "Projects include virtuals that locals/remotes are assigned to"
+  },
+  {
+    "tags": [
+      "c++",
+      "cpu-architecture",
+      "atomic",
+      "memory-barriers",
+      "itanium"
+    ],
+    "owner": {
+      "account_id": 13812734,
+      "reputation": 95,
+      "user_id": 9970074,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/lUW3so9F.png?s=256",
+      "display_name": "Alloth",
+      "link": "https://stackoverflow.com/users/9970074/alloth"
+    },
+    "is_answered": false,
+    "view_count": 87,
+    "answer_count": 0,
+    "score": 4,
+    "last_activity_date": 1783970034,
+    "creation_date": 1783953567,
+    "last_edit_date": 1783970034,
+    "question_id": 79980382,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980382/itanium-seq-cst-fence-and-relaxed-atomics-not-using-plain-loads-and-stores",
+    "title": "Itanium seq_cst Fence and Relaxed Atomics Not Using Plain Loads and Stores"
+  },
+  {
+    "tags": [
+      "javascript",
+      "html",
+      "jquery",
+      "draggable",
+      "droppable"
+    ],
+    "owner": {
+      "account_id": 2482273,
+      "reputation": 705,
+      "user_id": 2161507,
+      "user_type": "registered",
+      "accept_rate": 53,
+      "profile_image": "https://www.gravatar.com/avatar/c5914043eb203533073645d6993e14b8?s=256&d=identicon&r=PG",
+      "display_name": "stonypaul",
+      "link": "https://stackoverflow.com/users/2161507/stonypaul"
+    },
+    "is_answered": true,
+    "view_count": 56,
+    "answer_count": 2,
+    "score": 0,
+    "last_activity_date": 1783969608,
+    "creation_date": 1783953205,
+    "question_id": 79980381,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980381/restricting-the-droppable-vicinity-of-dynamically-generated-draggable-div",
+    "title": "Restricting the droppable vicinity of dynamically generated draggable div"
+  },
+  {
+    "tags": [
+      "tooling-recommendation",
+      "r",
+      "windows",
+      "rstudio"
+    ],
+    "owner": {
+      "account_id": 5807317,
+      "reputation": 321,
+      "user_id": 4579564,
+      "user_type": "registered",
+      "accept_rate": 57,
+      "profile_image": "https://www.gravatar.com/avatar/f69a85ffaf8612b451911ac811004d5b?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Denis",
+      "link": "https://stackoverflow.com/users/4579564/denis"
+    },
+    "is_answered": false,
+    "view_count": 80,
+    "closed_date": 1783960225,
+    "answer_count": 0,
+    "score": -1,
+    "last_activity_date": 1783957948,
+    "creation_date": 1783951479,
+    "last_edit_date": 1783957948,
+    "question_id": 79980372,
+    "link": "https://stackoverflow.com/questions/79980372/virtual-environment-manager-for-rstudio-on-windows-pc",
+    "closed_reason": "Needs more focus",
+    "title": "Virtual environment manager for RStudio on Windows PC"
+  },
+  {
+    "tags": [
+      "android",
+      "bluetooth"
+    ],
+    "owner": {
+      "account_id": 46698598,
+      "reputation": 7,
+      "user_id": 32928865,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/13b212dd2570af4d1bb2158b003967b9?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Ramandeep Singh Sodhi",
+      "link": "https://stackoverflow.com/users/32928865/ramandeep-singh-sodhi"
+    },
+    "is_answered": false,
+    "view_count": 70,
+    "answer_count": 0,
+    "score": -1,
+    "last_activity_date": 1783955973,
+    "creation_date": 1783951330,
+    "question_id": 79980370,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980370/is-bluetooth-pan-accessible-to-third-party-android-applications",
+    "title": "Is Bluetooth PAN accessible to third-party Android applications?"
+  },
+  {
+    "tags": [
+      "javafx"
+    ],
+    "owner": {
+      "account_id": 10751647,
+      "reputation": 179,
+      "user_id": 7915459,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/93dcb3dbe3fa41473a9ab1136f5e1f06?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "StuartM",
+      "link": "https://stackoverflow.com/users/7915459/stuartm"
+    },
+    "is_answered": false,
+    "view_count": 33,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783950093,
+    "creation_date": 1783950093,
+    "question_id": 79980366,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980366/error-when-importing-controlsfx-spreadsheetview-into-my-fxml-file",
+    "title": "Error when importing ControlsFx SpreadsheetView into my FXML-File?"
+  },
+  {
+    "tags": [
+      "javascript",
+      "html",
+      "jquery",
+      "draggable",
+      "droppable"
+    ],
+    "owner": {
+      "account_id": 2482273,
+      "reputation": 705,
+      "user_id": 2161507,
+      "user_type": "registered",
+      "accept_rate": 53,
+      "profile_image": "https://www.gravatar.com/avatar/c5914043eb203533073645d6993e14b8?s=256&d=identicon&r=PG",
+      "display_name": "stonypaul",
+      "link": "https://stackoverflow.com/users/2161507/stonypaul"
+    },
+    "is_answered": true,
+    "view_count": 69,
+    "answer_count": 3,
+    "score": 0,
+    "last_activity_date": 1783951348,
+    "creation_date": 1783949836,
+    "question_id": 79980365,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980365/dynamically-created-divs-not-draggable",
+    "title": "Dynamically created divs not draggable"
+  },
+  {
+    "tags": [
+      "c++"
+    ],
+    "owner": {
+      "account_id": 46073209,
+      "reputation": 12,
+      "user_id": 32596169,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/49d9095ebd28917157dd5e893fc3e53f?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "HaoShan49",
+      "link": "https://stackoverflow.com/users/32596169/haoshan49"
+    },
+    "is_answered": true,
+    "view_count": 185,
+    "closed_date": 1783959103,
+    "answer_count": 1,
+    "score": -4,
+    "last_activity_date": 1783959164,
+    "creation_date": 1783948970,
+    "last_edit_date": 1783959164,
+    "question_id": 79980356,
+    "link": "https://stackoverflow.com/questions/79980356/error-in-converting-a-string-into-an-integer-in-c",
+    "closed_reason": "Duplicate",
+    "title": "Error in converting a string into an integer in c++"
+  },
+  {
+    "tags": [
+      "bash"
+    ],
+    "owner": {
+      "account_id": 17757593,
+      "reputation": 43,
+      "user_id": 12894327,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/1ec5e2e9687885fcbcdf4aacd8de8408?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "k8AspvNUfYhkvpT9EX5YCSzoLouT0",
+      "link": "https://stackoverflow.com/users/12894327/k8aspvnufyhkvpt9ex5ycszolout0"
+    },
+    "is_answered": true,
+    "view_count": 80,
+    "accepted_answer_id": 79980388,
+    "answer_count": 2,
+    "score": 4,
+    "last_activity_date": 1783959681,
+    "creation_date": 1783948807,
+    "last_edit_date": 1783949584,
+    "question_id": 79980354,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980354/declare-with-global-and-export-does-not-work-for-sub-shell",
+    "title": "Declare with global and export does not work for sub shell"
+  },
+  {
+    "tags": [
+      "grails"
+    ],
+    "owner": {
+      "account_id": 3034352,
+      "reputation": 496,
+      "user_id": 2572790,
+      "user_type": "registered",
+      "accept_rate": 52,
+      "profile_image": "https://www.gravatar.com/avatar/c0f745b29e610fbf2d4298e3bec8e14f?s=256&d=identicon&r=PG",
+      "display_name": "user2572790",
+      "link": "https://stackoverflow.com/users/2572790/user2572790"
+    },
+    "is_answered": false,
+    "view_count": 31,
+    "answer_count": 0,
+    "score": 1,
+    "last_activity_date": 1783948424,
+    "creation_date": 1783948424,
+    "question_id": 79980352,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980352/how-to-use-micronaut-declarative-client-into-grails-7-2-0",
+    "title": "How to use micronaut declarative client into grails 7.2.0"
+  },
+  {
+    "tags": [
+      "lua",
+      "roblox"
+    ],
+    "owner": {
+      "account_id": 29566599,
+      "reputation": 33,
+      "user_id": 22659848,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/iVkGKKOj.jpg?s=256",
+      "display_name": "Martin",
+      "link": "https://stackoverflow.com/users/22659848/martin"
+    },
+    "is_answered": false,
+    "view_count": 30,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783947624,
+    "creation_date": 1783947624,
+    "question_id": 79980350,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980350/userinputservice-firing-twice-after-the-player-respawns",
+    "title": "UserInputService firing twice after the player respawns"
+  },
+  {
+    "tags": [
+      "advice",
+      "c#",
+      "xunit"
+    ],
+    "owner": {
+      "account_id": 1167770,
+      "reputation": 33749,
+      "user_id": 1145666,
+      "user_type": "registered",
+      "accept_rate": 75,
+      "profile_image": "https://i.sstatic.net/rXvMA.jpg?s=256",
+      "display_name": "Bart Friederichs",
+      "link": "https://stackoverflow.com/users/1145666/bart-friederichs"
+    },
+    "is_answered": false,
+    "view_count": 100,
+    "answer_count": 0,
+    "score": -3,
+    "last_activity_date": 1783946891,
+    "creation_date": 1783946891,
+    "question_id": 79980348,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980348/how-to-build-a-good-test-with-lots-of-data",
+    "title": "How to build a good test with lots of data?"
+  },
+  {
+    "tags": [
+      "rust"
+    ],
+    "owner": {
+      "account_id": 46038536,
+      "reputation": 21,
+      "user_id": 32579072,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/e5a1f9f5c23707676524e02cc4be8b75?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "krzemyk",
+      "link": "https://stackoverflow.com/users/32579072/krzemyk"
+    },
+    "is_answered": true,
+    "view_count": 89,
+    "answer_count": 1,
+    "score": 2,
+    "last_activity_date": 1783951593,
+    "creation_date": 1783946666,
+    "question_id": 79980347,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980347/how-to-return-errors-without-early-returning",
+    "title": "How to return errors without early returning?"
+  },
+  {
+    "tags": [
+      "c++",
+      "windows",
+      "winapi",
+      "toast",
+      "msix"
+    ],
+    "owner": {
+      "account_id": 32804210,
+      "reputation": 1411,
+      "user_id": 25493371,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/a23c50e000f6d044dcba6b118c36c186?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Joe J",
+      "link": "https://stackoverflow.com/users/25493371/joe-j"
+    },
+    "is_answered": false,
+    "view_count": 103,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783949066,
+    "creation_date": 1783946639,
+    "last_edit_date": 1783949066,
+    "question_id": 79980346,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980346/how-to-set-window-as-foreground-when-it-minimized",
+    "title": "How to set window as Foreground when it minimized?"
+  },
+  {
+    "tags": [
+      "powerbi"
+    ],
+    "owner": {
+      "account_id": 19973373,
+      "reputation": 57,
+      "user_id": 14638319,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/19b1baadba8ff02d7bf6c99267af5ce6?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Killian Gavin ",
+      "link": "https://stackoverflow.com/users/14638319/killian-gavin"
+    },
+    "is_answered": false,
+    "view_count": 39,
+    "closed_date": 1783957306,
+    "answer_count": 0,
+    "score": -3,
+    "last_activity_date": 1783946533,
+    "creation_date": 1783946533,
+    "question_id": 79980345,
+    "link": "https://stackoverflow.com/questions/79980345/how-do-i-increase-the-number-size-to-be-bigger-than-size-60-in-a-power-bi-card-v",
+    "closed_reason": "Not suitable for this site",
+    "title": "How do I increase the number size to be bigger than size 60 in a Power BI card visual?"
+  },
+  {
+    "tags": [
+      "sqlite",
+      ".net-4.8",
+      "terminal-services"
+    ],
+    "owner": {
+      "account_id": 46709570,
+      "reputation": 1,
+      "user_id": 32934143,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/4886012e9a23f41503b42d7cf3a4f221?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Emma Harris",
+      "link": "https://stackoverflow.com/users/32934143/emma-harris"
+    },
+    "is_answered": false,
+    "view_count": 65,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783952118,
+    "creation_date": 1783945639,
+    "last_edit_date": 1783952118,
+    "question_id": 79980343,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980343/problem-running-sqlite-in-terminal-services",
+    "title": "Problem running SQLite in Terminal Services"
+  },
+  {
+    "tags": [
+      "spatial",
+      "gis"
+    ],
+    "migrated_from": {
+      "other_site": {
+        "aliases": [
+          "https://statistics.stackexchange.com",
+          "https://crossvalidated.com"
+        ],
+        "styling": {
+          "tag_background_color": "#edefed",
+          "tag_foreground_color": "#5D5D5D",
+          "link_color": "#0077CC"
+        },
+        "related_sites": [
+          {
+            "relation": "meta",
+            "api_site_parameter": "stats.meta",
+            "site_url": "https://stats.meta.stackexchange.com",
+            "name": "Cross Validated Meta"
+          },
+          {
+            "relation": "chat",
+            "site_url": "https://chat.stackexchange.com?tab=site&host=stats.stackexchange.com",
+            "name": "Chat Stack Exchange"
+          }
+        ],
+        "markdown_extensions": [
+          "MathJax",
+          "Prettify"
+        ],
+        "launch_date": 1288900046,
+        "open_beta_date": 1280170800,
+        "closed_beta_date": 1279566000,
+        "site_state": "normal",
+        "high_resolution_icon_url": "https://stats.stackexchange.com/Content/Sites/stats/Img/apple-touch-icon@2.png",
+        "favicon_url": "https://stats.stackexchange.com/Content/Sites/stats/Img/favicon.ico",
+        "icon_url": "https://stats.stackexchange.com/Content/Sites/stats/Img/apple-touch-icon.png",
+        "audience": "people interested in statistics, machine learning, data analysis, data mining, and data visualization",
+        "site_url": "https://stats.stackexchange.com",
+        "api_site_parameter": "stats",
+        "logo_url": "https://stats.stackexchange.com/Content/Sites/stats/Img/logo.png",
+        "name": "Cross Validated",
+        "site_type": "main_site"
+      },
+      "on_date": 1783949188,
+      "question_id": 676552
+    },
+    "owner": {
+      "account_id": 1645507,
+      "reputation": 49,
+      "user_id": 4117426,
+      "user_type": "registered",
+      "accept_rate": 0,
+      "profile_image": "https://www.gravatar.com/avatar/bc5607e5e0c28e6ed1a57d7268736c3a?s=256&d=identicon&r=PG",
+      "display_name": "user8780",
+      "link": "https://stackoverflow.com/users/4117426/user8780"
+    },
+    "is_answered": false,
+    "view_count": 18,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783949402,
+    "creation_date": 1783945529,
+    "last_edit_date": 1783949402,
+    "question_id": 79980358,
+    "link": "https://stackoverflow.com/questions/79980358/selecting-a-specific-timestamp-for-multiple-layers-in-spatraster-object",
+    "title": "Selecting a specific timestamp for multiple layers in SpatRaster object"
+  },
+  {
+    "tags": [
+      "authentication",
+      "gcloud",
+      "account",
+      "google-iam",
+      "identity-management"
+    ],
+    "owner": {
+      "account_id": 17286725,
+      "reputation": 49,
+      "user_id": 12519175,
+      "user_type": "registered",
+      "profile_image": "https://lh3.googleusercontent.com/a-/AAuE7mBvgASSVmNFU1zbzan1QZM-2b9hR0swuAJP_qmcxQ=k-s256",
+      "display_name": "Hispalis Guadal",
+      "link": "https://stackoverflow.com/users/12519175/hispalis-guadal"
+    },
+    "is_answered": false,
+    "view_count": 28,
+    "closed_date": 1783946997,
+    "answer_count": 0,
+    "score": -2,
+    "last_activity_date": 1783945231,
+    "creation_date": 1783945231,
+    "question_id": 79980340,
+    "link": "https://stackoverflow.com/questions/79980340/google-cloud-project-created-with-gcloud-is-owned-by-a-different-email-identity",
+    "closed_reason": "Not suitable for this site",
+    "title": "Google Cloud project created with gcloud is owned by a different email identity than gcloud auth account"
+  },
+  {
+    "tags": [
+      "python",
+      "html",
+      "forms",
+      "http",
+      "flask"
+    ],
+    "owner": {
+      "account_id": 44150934,
+      "reputation": 1,
+      "user_id": 31603746,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/c796d5774df9b7ca1cc9c9bf79c09c4e?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Ainulhaqsde",
+      "link": "https://stackoverflow.com/users/31603746/ainulhaqsde"
+    },
+    "is_answered": false,
+    "view_count": 25,
+    "closed_date": 1783946294,
+    "answer_count": 0,
+    "score": -2,
+    "last_activity_date": 1783945205,
+    "creation_date": 1783945205,
+    "question_id": 79980339,
+    "link": "https://stackoverflow.com/questions/79980339/flask-form-submission-returns-405-method-not-allowed-even-though-the-route-exist",
+    "closed_reason": "Duplicate",
+    "title": "Flask form submission returns 405 Method Not Allowed even though the route exists"
+  },
+  {
+    "tags": [
+      "google-cloud-platform",
+      "claude",
+      "google-cloud-identity-aware-proxy",
+      "claude-code"
+    ],
+    "owner": {
+      "account_id": 1870503,
+      "reputation": 1499,
+      "user_id": 1692855,
+      "user_type": "registered",
+      "accept_rate": 59,
+      "profile_image": "https://www.gravatar.com/avatar/414813c5665f4bd915259a20f8ce07e0?s=256&d=identicon&r=PG",
+      "display_name": "faridghar",
+      "link": "https://stackoverflow.com/users/1692855/faridghar"
+    },
+    "is_answered": false,
+    "view_count": 38,
+    "closed_date": 1783950016,
+    "answer_count": 0,
+    "score": -4,
+    "last_activity_date": 1783944573,
+    "creation_date": 1783944573,
+    "question_id": 79980334,
+    "link": "https://stackoverflow.com/questions/79980334/claude-apps-gateway-on-google-cloud-platform-with-identity-aware-proxy",
+    "closed_reason": "Not suitable for this site",
+    "title": "Claude Apps Gateway on Google Cloud Platform with Identity Aware Proxy"
+  },
+  {
+    "tags": [
+      "r",
+      "installation",
+      "package"
+    ],
+    "owner": {
+      "account_id": 46709437,
+      "reputation": 31,
+      "user_id": 32934066,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/abad2b55e9f712a2a749fc4c7664a93b?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Pablo Dominguez Guerrero",
+      "link": "https://stackoverflow.com/users/32934066/pablo-dominguez-guerrero"
+    },
+    "is_answered": true,
+    "view_count": 49,
+    "answer_count": 1,
+    "score": 1,
+    "last_activity_date": 1783952722,
+    "creation_date": 1783944012,
+    "last_edit_date": 1783951900,
+    "question_id": 79980332,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980332/residuals-lrm-is-not-in-the-rms-r-package-where-installed",
+    "title": "residuals.lrm is not in the rms R package where installed"
+  },
+  {
+    "tags": [
+      "dart"
+    ],
+    "owner": {
+      "account_id": 44972163,
+      "reputation": 9,
+      "user_id": 32878953,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/c9de76714f4496d406d14725ff145887?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "BrimmingOtter29",
+      "link": "https://stackoverflow.com/users/32878953/brimmingotter29"
+    },
+    "is_answered": true,
+    "view_count": 89,
+    "answer_count": 1,
+    "score": 0,
+    "last_activity_date": 1784001893,
+    "creation_date": 1783943146,
+    "last_edit_date": 1784001893,
+    "question_id": 79980329,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980329/how-to-i-remove-the-current-element-from-a-list-while-iterating-over-it",
+    "title": "How to I remove the current element from a List while iterating over it?"
+  },
+  {
+    "tags": [
+      "fpga",
+      "riscv",
+      "microchip"
+    ],
+    "owner": {
+      "account_id": 28294051,
+      "reputation": 11,
+      "user_id": 32933992,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/dfcb58d95e48fe54c1cd4d6c00a59d36?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "general_andreas",
+      "link": "https://stackoverflow.com/users/32933992/general-andreas"
+    },
+    "is_answered": false,
+    "view_count": 64,
+    "answer_count": 0,
+    "score": 1,
+    "last_activity_date": 1783950957,
+    "creation_date": 1783943028,
+    "last_edit_date": 1783950957,
+    "question_id": 79980327,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980327/risc-v-return-address-corruption-bug",
+    "title": "RISC-V return address corruption bug"
+  },
+  {
+    "tags": [
+      "azure-pipelines",
+      "playwright-dotnet",
+      "reqnroll"
+    ],
+    "owner": {
+      "account_id": 343177,
+      "reputation": 506,
+      "user_id": 674718,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_image": "https://i.sstatic.net/3Kcjb.jpg?s=256",
+      "display_name": "Kev",
+      "link": "https://stackoverflow.com/users/674718/kev"
+    },
+    "is_answered": false,
+    "view_count": 28,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783942811,
+    "creation_date": 1783942811,
+    "question_id": 79980326,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980326/test-reruns-on-azure-pipeline-have-stopped-working",
+    "title": "Test reruns on azure pipeline have stopped working"
+  },
+  {
+    "tags": [
+      "fasm"
+    ],
+    "owner": {
+      "account_id": 42942990,
+      "reputation": 23,
+      "user_id": 30997755,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/6PP7eUBM.png?s=256",
+      "display_name": "Sadaf",
+      "link": "https://stackoverflow.com/users/30997755/sadaf"
+    },
+    "is_answered": false,
+    "view_count": 40,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783941553,
+    "creation_date": 1783941553,
+    "question_id": 79980318,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980318/include-directory-for-fasm",
+    "title": "Include directory for FASM"
+  },
+  {
+    "tags": [
+      "function",
+      "tkinter",
+      "tkinter-button",
+      "tkinter-scale"
+    ],
+    "owner": {
+      "account_id": 46709256,
+      "reputation": 1,
+      "user_id": 32933973,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/0763cb2a877040309e0d501ac7d1f8da?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "jellybeanmachine",
+      "link": "https://stackoverflow.com/users/32933973/jellybeanmachine"
+    },
+    "is_answered": true,
+    "view_count": 46,
+    "closed_date": 1783946597,
+    "answer_count": 1,
+    "score": 1,
+    "last_activity_date": 1783941580,
+    "creation_date": 1783941258,
+    "question_id": 79980316,
+    "link": "https://stackoverflow.com/questions/79980316/how-do-i-get-a-value-from-a-tkinter-scale-slider-whilst-when-it-is-in-a-function",
+    "closed_reason": "Duplicate",
+    "title": "How do I get a value from a tkinter scale/slider whilst when it is in a function?"
+  },
+  {
+    "tags": [
+      "security",
+      "electron",
+      "mtls"
+    ],
+    "owner": {
+      "account_id": 30660128,
+      "reputation": 1,
+      "user_id": 23504717,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/f567d1069a1d40be47be71bca312c023?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "jqvelin",
+      "link": "https://stackoverflow.com/users/23504717/jqvelin"
+    },
+    "is_answered": false,
+    "view_count": 31,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783940686,
+    "creation_date": 1783940686,
+    "question_id": 79980310,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980310/how-to-implement-an-mtls-client-within-an-electron-app",
+    "title": "How to implement an mTLS client within an Electron app?"
+  },
+  {
+    "tags": [
+      "jackhenry-jxchange"
+    ],
+    "owner": {
+      "account_id": 46263581,
+      "reputation": 1,
+      "user_id": 32691541,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/1ab060dbddd3f43ef031eeca0c2a5568?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Harshwardhan Raghu",
+      "link": "https://stackoverflow.com/users/32691541/harshwardhan-raghu"
+    },
+    "is_answered": false,
+    "view_count": 30,
+    "answer_count": 0,
+    "score": -4,
+    "last_activity_date": 1783940983,
+    "creation_date": 1783939992,
+    "last_edit_date": 1783940983,
+    "question_id": 79980307,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980307/wiretrninq-wirestat-ees-760-after-wiretrnisoadd-on-jxchange-test",
+    "title": "WireTrnInq WireStat + EES 760 after WireTrnISOAdd on jXchange TEST"
+  },
+  {
+    "tags": [
+      "neutralinojs"
+    ],
+    "owner": {
+      "account_id": 2825302,
+      "reputation": 7,
+      "user_id": 2428069,
+      "user_type": "registered",
+      "profile_image": "https://i.sstatic.net/2ff2VcfM.jpg?s=256",
+      "display_name": "Blouet",
+      "link": "https://stackoverflow.com/users/2428069/blouet"
+    },
+    "is_answered": false,
+    "view_count": 33,
+    "answer_count": 0,
+    "score": -2,
+    "last_activity_date": 1783939350,
+    "creation_date": 1783939350,
+    "question_id": 79980305,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980305/closing-created-window",
+    "title": "Closing Created Window"
+  },
+  {
+    "tags": [
+      "best-practices",
+      "artificial-intelligence",
+      "terminology",
+      "developer-tools"
+    ],
+    "owner": {
+      "account_id": 46708615,
+      "reputation": 1,
+      "user_id": 32933601,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/baafad40dffd0bac057bdb782cf4d73b?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "shivam soni",
+      "link": "https://stackoverflow.com/users/32933601/shivam-soni"
+    },
+    "is_answered": false,
+    "view_count": 151,
+    "closed_date": 1783946103,
+    "answer_count": 0,
+    "score": -6,
+    "last_activity_date": 1783939017,
+    "creation_date": 1783937509,
+    "last_edit_date": 1783938182,
+    "question_id": 79980296,
+    "link": "https://stackoverflow.com/questions/79980296/how-are-you-preparing-yourself-as-a-developer-in-the-ai-era",
+    "closed_reason": "Needs more focus",
+    "title": "How are you preparing yourself as a developer in the AI era?"
+  },
+  {
+    "tags": [
+      "blazor",
+      "chromium",
+      "blazor-webassembly"
+    ],
+    "owner": {
+      "account_id": 2628084,
+      "reputation": 491,
+      "user_id": 2274701,
+      "user_type": "registered",
+      "accept_rate": 100,
+      "profile_image": "https://www.gravatar.com/avatar/2af997c7c5e0ac11a404cbd441c73fd3?s=256&d=identicon&r=PG",
+      "display_name": "Developer",
+      "link": "https://stackoverflow.com/users/2274701/developer"
+    },
+    "is_answered": false,
+    "view_count": 45,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783936895,
+    "creation_date": 1783936369,
+    "question_id": 79980293,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980293/can-i-disable-pausing-on-debugger-statements-in-chromium-with-blazor",
+    "title": "Can I disable pausing on debugger statements in Chromium with Blazor?"
+  },
+  {
+    "tags": [
+      "c#",
+      "c++",
+      "mfc",
+      "clr"
+    ],
+    "owner": {
+      "account_id": 14540387,
+      "reputation": 65,
+      "user_id": 11988568,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/d176794e49f68e5afed00ffe9bb0a79a?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Domestos",
+      "link": "https://stackoverflow.com/users/11988568/domestos"
+    },
+    "is_answered": false,
+    "view_count": 130,
+    "closed_date": 1783961537,
+    "answer_count": 0,
+    "score": 3,
+    "last_activity_date": 1783934161,
+    "creation_date": 1783933809,
+    "last_edit_date": 1783934161,
+    "question_id": 79980278,
+    "link": "https://stackoverflow.com/questions/79980278/how-to-call-a-c-net-10-library-from-a-native-mfc-c-application",
+    "closed_reason": "Needs more focus",
+    "title": "How to call a C# .NET 10 library from a native MFC C++ application?"
+  },
+  {
+    "tags": [
+      "bash"
+    ],
+    "owner": {
+      "account_id": 5223267,
+      "reputation": 67,
+      "user_id": 4176046,
+      "user_type": "registered",
+      "profile_image": "https://lh5.googleusercontent.com/-dZiqLOenX0s/AAAAAAAAAAI/AAAAAAAAAAA/bwO9PA68RGs/s256-rj/photo.jpg",
+      "display_name": "Sergey Guzenkov",
+      "link": "https://stackoverflow.com/users/4176046/sergey-guzenkov"
+    },
+    "is_answered": true,
+    "view_count": 111,
+    "closed_date": 1783936663,
+    "answer_count": 1,
+    "score": -3,
+    "last_activity_date": 1783949542,
+    "creation_date": 1783932921,
+    "last_edit_date": 1783949542,
+    "question_id": 79980273,
+    "link": "https://stackoverflow.com/questions/79980273/what-does-echo-do-in-bash-and-why-does-exiting-it-exit-the-parent-proces",
+    "closed_reason": "Needs details or clarity",
+    "title": "What does &#39;echo &quot;\\&quot; &#39; do in bash, and why does exiting it exit the parent process?"
+  },
+  {
+    "tags": [
+      "java",
+      "or-tools"
+    ],
+    "owner": {
+      "account_id": 5127086,
+      "reputation": 440,
+      "user_id": 4108711,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/8b0d3f868eb14e695cd5772d74c78aa8?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "rezaebrh",
+      "link": "https://stackoverflow.com/users/4108711/rezaebrh"
+    },
+    "is_answered": true,
+    "view_count": 66,
+    "answer_count": 2,
+    "score": 0,
+    "last_activity_date": 1783964740,
+    "creation_date": 1783932730,
+    "last_edit_date": 1783949218,
+    "question_id": 79980272,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980272/is-registerstatedependenttransitcallback-available-in-or-tools-java-bindings",
+    "title": "Is RegisterStateDependentTransitCallback() available in OR-Tools Java bindings?"
+  },
+  {
+    "tags": [
+      "php",
+      "symfony",
+      "doctrine-orm"
+    ],
+    "owner": {
+      "account_id": 5990492,
+      "reputation": 10636,
+      "user_id": 4706711,
+      "user_type": "registered",
+      "accept_rate": 87,
+      "profile_image": "https://lh3.googleusercontent.com/-dlNFOguGD_A/AAAAAAAAAAI/AAAAAAAABwA/BMlWtrTgZtY/s256-rj/photo.jpg",
+      "display_name": "Dimitrios Desyllas",
+      "link": "https://stackoverflow.com/users/4706711/dimitrios-desyllas"
+    },
+    "is_answered": false,
+    "view_count": 68,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783952075,
+    "creation_date": 1783931660,
+    "last_edit_date": 1783952075,
+    "question_id": 79980266,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980266/how-i-can-fetch-categories-and-products-that-are-not-soft-deleted",
+    "title": "How I can fetch Categories and products that are not soft-deleted?"
+  },
+  {
+    "tags": [
+      "swift",
+      "appkit"
+    ],
+    "owner": {
+      "account_id": 43780866,
+      "reputation": 1,
+      "user_id": 31413662,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/dc7546e4bd1878825a492f6cc4f8d14c?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Nishanth S Pradeep",
+      "link": "https://stackoverflow.com/users/31413662/nishanth-s-pradeep"
+    },
+    "is_answered": false,
+    "view_count": 47,
+    "answer_count": 0,
+    "score": -1,
+    "last_activity_date": 1783992532,
+    "creation_date": 1783929940,
+    "last_edit_date": 1783992532,
+    "question_id": 79980261,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980261/why-does-voiceover-skip-nscollectionviewitem-container-when-it-contains-only-one",
+    "title": "Why does VoiceOver skip NSCollectionViewItem container when it contains only one accessible element?"
+  },
+  {
+    "tags": [
+      "android",
+      "linux",
+      "build",
+      "kernel",
+      "xiaomi"
+    ],
+    "owner": {
+      "account_id": 46706998,
+      "reputation": 9,
+      "user_id": 32932689,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/c424904121774773f9dafcbb4a62021b?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "sidneypepo",
+      "link": "https://stackoverflow.com/users/32932689/sidneypepo"
+    },
+    "is_answered": false,
+    "view_count": 80,
+    "closed_date": 1783937324,
+    "answer_count": 0,
+    "score": -1,
+    "last_activity_date": 1783928581,
+    "creation_date": 1783928437,
+    "last_edit_date": 1783928581,
+    "question_id": 79980250,
+    "link": "https://stackoverflow.com/questions/79980250/how-to-avoid-android-kernel-from-always-rebuilding-from-scratch",
+    "closed_reason": "Not suitable for this site",
+    "title": "How to avoid Android Kernel from always rebuilding from scratch?"
+  },
+  {
+    "tags": [
+      "bash",
+      "agent"
+    ],
+    "owner": {
+      "account_id": 39501096,
+      "reputation": 1,
+      "user_id": 29307146,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/fcdec2c789eaa65efb7a2cb208ae6c7f?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Abhishek Bhat",
+      "link": "https://stackoverflow.com/users/29307146/abhishek-bhat"
+    },
+    "is_answered": true,
+    "view_count": 61,
+    "closed_date": 1783934559,
+    "answer_count": 1,
+    "score": -3,
+    "last_activity_date": 1783931842,
+    "creation_date": 1783926625,
+    "question_id": 79980242,
+    "link": "https://stackoverflow.com/questions/79980242/opencode-desktop-application-showing-eprm-error",
+    "closed_reason": "Not suitable for this site",
+    "title": "OpenCode Desktop Application Showing EPRM Error"
+  },
+  {
+    "tags": [
+      "android",
+      "ios",
+      "reactjs",
+      "flutter",
+      "webview"
+    ],
+    "owner": {
+      "account_id": 22690367,
+      "reputation": 349,
+      "user_id": 16859376,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/7f6e406a22ed90b870f59df8e9164f08?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "skwFE",
+      "link": "https://stackoverflow.com/users/16859376/skwfe"
+    },
+    "is_answered": false,
+    "view_count": 54,
+    "answer_count": 0,
+    "score": -1,
+    "last_activity_date": 1783925703,
+    "creation_date": 1783925703,
+    "question_id": 79980234,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980234/flutter-inappwebview-ios-html-fixed-header-moves-judders-when-the-software-ke",
+    "title": "flutter_inappwebview (iOS): HTML fixed header moves/judders when the software keyboard opens — `resizeToAvoidBottomInset` true vs false"
+  },
+  {
+    "tags": [
+      "javascript"
+    ],
+    "owner": {
+      "account_id": 46707164,
+      "reputation": 11,
+      "user_id": 32932767,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/e7b277ad1a2c4ebae39ce615dd986b62?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "user32932767",
+      "link": "https://stackoverflow.com/users/32932767/user32932767"
+    },
+    "is_answered": true,
+    "view_count": 109,
+    "closed_date": 1783927261,
+    "accepted_answer_id": 79980237,
+    "answer_count": 3,
+    "score": 0,
+    "last_activity_date": 1783928355,
+    "creation_date": 1783925456,
+    "last_edit_date": 1783928355,
+    "question_id": 79980231,
+    "link": "https://stackoverflow.com/questions/79980231/what-are-ways-to-draw-rectangle-on-image-image-display-but-rectangle-does-not",
+    "closed_reason": "Duplicate",
+    "title": "What are ways to Draw Rectangle on Image? Image display. But Rectangle does not display. Canvas element JavaScript"
+  },
+  {
+    "tags": [
+      "time-series",
+      "streaming",
+      "dolphindb"
+    ],
+    "owner": {
+      "account_id": 44689422,
+      "reputation": 1,
+      "user_id": 31884584,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/f23a8c98d34c35f56130c9e22701f9d4?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Lorne_S",
+      "link": "https://stackoverflow.com/users/31884584/lorne-s"
+    },
+    "is_answered": false,
+    "view_count": 43,
+    "answer_count": 0,
+    "score": 0,
+    "last_activity_date": 1783935547,
+    "creation_date": 1783925356,
+    "question_id": 79980230,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980230/reactivestateengine-has-no-window-parameter-how-to-do-sliding-window-in-stream",
+    "title": "ReactiveStateEngine has no window parameter, how to do sliding window in stream processing"
+  },
+  {
+    "tags": [
+      "tooling-recommendation",
+      "visual-studio-code",
+      "artificial-intelligence",
+      "visual-studio-debugging"
+    ],
+    "owner": {
+      "account_id": 46707876,
+      "reputation": 5,
+      "user_id": 32933166,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/892f421f2337471b5f5a84f9fbd00a1d?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Ochezuai Ogbonna Chibo",
+      "link": "https://stackoverflow.com/users/32933166/ochezuai-ogbonna-chibo"
+    },
+    "is_answered": false,
+    "view_count": 76,
+    "closed_date": 1783957295,
+    "answer_count": 0,
+    "score": -6,
+    "last_activity_date": 1783925300,
+    "creation_date": 1783925300,
+    "question_id": 79980229,
+    "link": "https://stackoverflow.com/questions/79980229/which-vscode-compatible-ai-coding-agent-is-best-for-west-africa-region-as-chatgp",
+    "closed_reason": "Needs more focus",
+    "title": "Which VScode compatible AI coding agent is best for West Africa region as ChatGPT-Official is unavailable? How good and reliable is CodeGPT?"
+  },
+  {
+    "tags": [
+      "azure-ad-b2c",
+      "azure-ad-b2c-custom-policy"
+    ],
+    "owner": {
+      "account_id": 30026127,
+      "reputation": 23,
+      "user_id": 23010307,
+      "user_type": "registered",
+      "profile_image": "https://lh3.googleusercontent.com/a/ACg8ocJKtmWEK4NCxXjNcKS_Tcmvlq-VCefRKCHdT6VBXcBj=k-s256",
+      "display_name": "Ebin Tom",
+      "link": "https://stackoverflow.com/users/23010307/ebin-tom"
+    },
+    "is_answered": false,
+    "view_count": 61,
+    "answer_count": 0,
+    "score": 1,
+    "last_activity_date": 1783957881,
+    "creation_date": 1783921440,
+    "question_id": 79980215,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980215/azure-ad-b2c-self-asserted-verification-control-continue-button-now-uses-aria-d",
+    "title": "Azure AD B2C self-asserted verification control: Continue button now uses aria-disabled instead of disabled?"
+  },
+  {
+    "tags": [
+      "youtube-api"
+    ],
+    "owner": {
+      "account_id": 46694016,
+      "reputation": 1,
+      "user_id": 32926700,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/0779aa16016862dc11d56bf8c76b575c?s=256&d=identicon&r=PG",
+      "display_name": "M.ibrahim",
+      "link": "https://stackoverflow.com/users/32926700/m-ibrahim"
+    },
+    "is_answered": false,
+    "view_count": 66,
+    "closed_date": 1783922616,
+    "answer_count": 0,
+    "score": -4,
+    "last_activity_date": 1783921544,
+    "creation_date": 1783921057,
+    "last_edit_date": 1783921544,
+    "question_id": 79980214,
+    "link": "https://stackoverflow.com/questions/79980214/why-does-youtube-transcript-api-return-transcriptsdisabled-for-videos-that-clear",
+    "closed_reason": "Not suitable for this site",
+    "title": "Why does youtube-transcript-api return TranscriptsDisabled for videos that clearly have captions?"
+  },
+  {
+    "tags": [
+      "javascript",
+      "html"
+    ],
+    "owner": {
+      "account_id": 46707601,
+      "reputation": 9,
+      "user_id": 32933008,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/87418d078c05e01e6278372f787bf248?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "Mughees Shan",
+      "link": "https://stackoverflow.com/users/32933008/mughees-shan"
+    },
+    "is_answered": true,
+    "view_count": 84,
+    "answer_count": 1,
+    "score": 0,
+    "last_activity_date": 1783926468,
+    "creation_date": 1783920542,
+    "last_edit_date": 1783926468,
+    "question_id": 79980211,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79980211/how-to-redirect-from-index-html-to-main-html-after-animation-ends",
+    "title": "How to redirect from index.html to main.html after animation ends?"
+  }
+]

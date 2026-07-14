@@ -1,0 +1,28 @@
+[
+  {
+    "tags": [
+      "memory-management",
+      "zig"
+    ],
+    "owner": {
+      "account_id": 11126207,
+      "reputation": 322,
+      "user_id": 8167625,
+      "user_type": "registered",
+      "profile_image": "https://www.gravatar.com/avatar/66dccacfea95e87e42b14455e8a164fa?s=256&d=identicon&r=PG&f=y&so-version=2",
+      "display_name": "RedRuin",
+      "link": "https://stackoverflow.com/users/8167625/redruin"
+    },
+    "is_answered": false,
+    "view_count": 107,
+    "answer_count": 0,
+    "score": 1,
+    "last_activity_date": 1783669955,
+    "creation_date": 1783630895,
+    "last_edit_date": 1783659177,
+    "question_id": 79978475,
+    "content_license": "CC BY-SA 4.0",
+    "link": "https://stackoverflow.com/questions/79978475/how-should-i-handle-memory-management-around-a-structs-heap-allocated-member",
+    "title": "How should I handle memory management around a struct&#39;s heap-allocated member?"
+  }
+]
