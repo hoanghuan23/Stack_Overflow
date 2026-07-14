@@ -26,7 +26,11 @@ class SchedulerService:
         job_ids: list[int] = []
         scraper = ScraperService(self.db)
         for source in sources:
-            job, _ = scraper.scrape_source(source.id)
+            job, _ = scraper.scrape_source(
+                source.id,
+                job_type="scrape_new_questions",
+                stop_at_latest_seen=True,
+            )
             job_ids.append(job.id)
         return job_ids
 

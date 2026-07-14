@@ -111,6 +111,13 @@ class QuestionRepository:
         )
         return list(self.db.scalars(stmt))
 
+    def latest_created_at_for_source(self, source_id: int) -> datetime | None:
+        return self.db.scalar(
+            select(func.max(Question.question_created_at))
+            .join(SourceQuestion, SourceQuestion.question_id == Question.id)
+            .where(SourceQuestion.source_id == source_id)
+        )
+
     def upsert_from_api_item(self, source_id: int, item: dict) -> tuple[Question, bool]:
         stackoverflow_id = int(item["question_id"])
         question = self.db.scalar(

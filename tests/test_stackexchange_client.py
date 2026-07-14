@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from datetime import datetime
+
 from app.core.config import Settings
 from app.services.stackexchange_client import StackExchangeAPIError, StackExchangeClient
 
@@ -85,6 +87,28 @@ def test_fetch_questions_paginates_and_respects_backoff():
     assert len(session.calls) == 2
     assert sleeps == [2]
     assert result.quota_max == 300
+
+
+def test_fetch_questions_stops_when_latest_seen_question_is_reached():
+    latest_seen = datetime.utcfromtimestamp(1_700_000_000)
+    session = FakeSession(
+        [
+            {
+                "items": [
+                    {"question_id": 2, "creation_date": 1_700_000_100},
+                    {"question_id": 1, "creation_date": 1_700_000_000},
+                ],
+                "has_more": True,
+            },
+            {"items": [{"question_id": 3, "creation_date": 1_699_999_900}], "has_more": False},
+        ]
+    )
+    client = make_client(session)
+
+    result = client.fetch_questions("latest", "latest", created_after=latest_seen)
+
+    assert [item["question_id"] for item in result.items] == [2]
+    assert len(session.calls) == 1
 
 
 def test_fetch_questions_raises_api_error():

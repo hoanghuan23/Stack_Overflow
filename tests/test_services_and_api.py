@@ -72,6 +72,16 @@ class FakeStackExchangeClient:
         return StackExchangeResult(items=[item], quota_remaining=250)
 
 
+class TrackingStackExchangeClient(FakeStackExchangeClient):
+    def __init__(self):
+        super().__init__()
+        self.created_after = None
+
+    def fetch_questions(self, source_type: str, identifier: str, *, created_after=None):
+        self.created_after = created_after
+        return StackExchangeResult(items=[], quota_remaining=299)
+
+
 def test_health_and_create_sources(client, db_session):
     from app.api.sources import get_scraper_service
 
@@ -150,6 +160,66 @@ def test_scrape_refreshes_daily_analytics_cache_and_schedule(db_session):
     assert first_next_scrape is not None
     assert source.next_scrape is not None
     assert timedelta(minutes=350) < source.next_scrape - source.last_scraped < timedelta(minutes=370)
+
+
+def test_scrape_new_questions_uses_latest_seen_question_as_cutoff(db_session):
+    from app.db.models import Source
+
+    source = Source(source_type="latest", identifier="latest")
+    db_session.add(source)
+    db_session.flush()
+    latest_seen = datetime.utcfromtimestamp(1_700_000_000)
+    question = Question(
+        stackoverflow_question_id=79978475,
+        source_id=source.id,
+        title="Existing question",
+        link="https://stackoverflow.com/questions/79978475/existing-question",
+        last_activity_at=latest_seen,
+        question_created_at=latest_seen,
+    )
+    db_session.add(question)
+    db_session.flush()
+    db_session.add(SourceQuestion(source_id=source.id, question_id=question.id))
+    db_session.commit()
+
+    client = TrackingStackExchangeClient()
+    job, _ = ScraperService(db_session, client=client).scrape_source(  # type: ignore[arg-type]
+        source.id,
+        job_type="scrape_new_questions",
+        stop_at_latest_seen=True,
+    )
+
+    assert job.job_type == "scrape_new_questions"
+    assert client.created_after == latest_seen
+
+
+def test_scheduler_runs_due_sources_as_scrape_new_questions(db_session, monkeypatch):
+    from app.db.models import Source
+    from app.services.scheduler_service import SchedulerService
+
+    source = Source(
+        source_type="latest",
+        identifier="latest",
+        next_scrape=datetime.utcnow() - timedelta(minutes=1),
+    )
+    db_session.add(source)
+    db_session.commit()
+    calls = []
+
+    class FakeScraperService:
+        def __init__(self, db):
+            self.db = db
+
+        def scrape_source(self, source_id: int, *, job_type: str, stop_at_latest_seen: bool):
+            calls.append((source_id, job_type, stop_at_latest_seen))
+            return PipelineJob(id=123, job_type=job_type, source_id=source_id), StackExchangeResult(items=[])
+
+    monkeypatch.setattr("app.services.scheduler_service.ScraperService", FakeScraperService)
+
+    job_ids = SchedulerService(db_session).run_due_sources()
+
+    assert job_ids == [123]
+    assert calls == [(source.id, "scrape_new_questions", True)]
 
 
 def test_scrape_failure_marks_job_failed_and_logs(db_session):

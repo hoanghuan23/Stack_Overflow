@@ -30,18 +30,34 @@ class ScraperService:
         self.jobs = JobRepository(db)
         self.analytics = AnalyticsRepository(db)
 
-    def scrape_source(self, source_id: int) -> tuple[PipelineJob, StackExchangeResult]:
+    def scrape_source(
+        self,
+        source_id: int,
+        *,
+        job_type: str = "scrape_questions",
+        stop_at_latest_seen: bool = False,
+    ) -> tuple[PipelineJob, StackExchangeResult]:
         source = self.sources.get(source_id)
         if source is None:
             raise ValueError(f"Source {source_id} not found")
 
-        job = self.jobs.start("scrape_questions", source_id=source.id)
+        job = self.jobs.start(job_type, source_id=source.id)
         self.db.commit()
         self.db.refresh(job)
         result = StackExchangeResult(items=[])
 
         try:
-            result = self.client.fetch_questions(source.source_type, source.identifier)
+            latest_seen_at = (
+                self.questions.latest_created_at_for_source(source.id)
+                if stop_at_latest_seen
+                else None
+            )
+            fetch_kwargs = {"created_after": latest_seen_at} if latest_seen_at is not None else {}
+            result = self.client.fetch_questions(
+                source.source_type,
+                source.identifier,
+                **fetch_kwargs,
+            )
             job.questions_found = len(result.items)
             question_ids_for_answers: list[int] = []
 

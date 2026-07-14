@@ -11,9 +11,9 @@ from app.db.models import AnalyticsCache, Question, QuestionMetric, Source, Sour
 
 
 MINUTES_BY_SOURCE_TIER = {
-    5: 15,
-    4: 30,
-    3: 60,
+    5: 30,
+    4: 60,
+    3: 120,
     2: 180,
     1: 360,
 }
