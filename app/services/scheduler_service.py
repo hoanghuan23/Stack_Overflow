@@ -34,6 +34,9 @@ class SchedulerService:
             job_ids.append(job.id)
         return job_ids
 
-    def run_due_metrics(self, limit: int = 100) -> int:
-        job, _, _ = MetricService(self.db).run_due_updates(limit=limit)
+    def run_due_metrics(self, limit: int = 100) -> int | None:
+        metrics = MetricService(self.db)
+        if not metrics.questions.due_for_metric_update(limit=1):
+            return None
+        job, _, _ = metrics.run_due_updates(limit=limit)
         return job.id

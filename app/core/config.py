@@ -12,6 +12,7 @@ class Settings:
     stackexchange_timeout_seconds: int = 30
     stackexchange_max_pages: int = 5
     default_scrape_interval_minutes: int = 60
+    scheduler_interval_seconds: int = 60
 
 
 def get_settings() -> Settings:
@@ -26,4 +27,5 @@ def get_settings() -> Settings:
         default_scrape_interval_minutes=int(
             os.getenv("DEFAULT_SCRAPE_INTERVAL_MINUTES", "60")
         ),
+        scheduler_interval_seconds=int(os.getenv("SCHEDULER_INTERVAL_SECONDS", "60")),
     )

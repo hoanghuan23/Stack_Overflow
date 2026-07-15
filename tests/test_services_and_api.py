@@ -222,6 +222,15 @@ def test_scheduler_runs_due_sources_as_scrape_new_questions(db_session, monkeypa
     assert calls == [(source.id, "scrape_new_questions", True)]
 
 
+def test_scheduler_skips_metric_job_when_no_questions_are_due(db_session):
+    from app.services.scheduler_service import SchedulerService
+
+    job_id = SchedulerService(db_session).run_due_metrics()
+
+    assert job_id is None
+    assert db_session.query(PipelineJob).count() == 0
+
+
 def test_scrape_failure_marks_job_failed_and_logs(db_session):
     from app.db.models import Source
 
