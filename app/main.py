@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import asyncio
+import logging
+import sys
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI
@@ -10,6 +12,22 @@ from app.core.config import get_settings
 from app.db import models
 from app.db.session import Base, engine
 from app.services.scheduler_runner import scheduler_loop, stop_scheduler
+
+
+def configure_logging() -> None:
+    formatter = logging.Formatter("%(name)s - %(levelname)s - %(message)s")
+
+    for logger_name in ("stackoverflow_api.scraper", "stackoverflow_api.metrics"):
+        logger = logging.getLogger(logger_name)
+        logger.setLevel(logging.INFO)
+        logger.propagate = False
+        if logger.handlers:
+            for handler in logger.handlers:
+                handler.setFormatter(formatter)
+            continue
+        handler = logging.StreamHandler(sys.stdout)
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
 
 
 @asynccontextmanager
@@ -28,6 +46,7 @@ async def lifespan(app: FastAPI):
 
 
 def create_app() -> FastAPI:
+    configure_logging()
     app = FastAPI(title="Stack Overflow Crawler", lifespan=lifespan)
     app.include_router(health.router)
     app.include_router(sources.router)

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 from datetime import datetime
 
 from sqlalchemy.orm import Session
@@ -12,6 +13,9 @@ from app.repositories.job_repository import JobRepository
 from app.repositories.question_repository import QuestionRepository
 from app.repositories.source_repository import SourceRepository
 from app.services.stackexchange_client import StackExchangeClient, StackExchangeResult
+
+
+logger = logging.getLogger("stackoverflow_api.scraper")
 
 
 class ScraperService:
@@ -40,6 +44,14 @@ class ScraperService:
         source = self.sources.get(source_id)
         if source is None:
             raise ValueError(f"Source {source_id} not found")
+
+        logger.info(
+            "Bat dau scrape bai moi | source=%s id=%s type=%s max_pages=%s",
+            source.identifier,
+            source.id,
+            source.source_type,
+            self.settings.stackexchange_max_pages,
+        )
 
         job = self.jobs.start(job_type, source_id=source.id)
         self.db.commit()
@@ -94,6 +106,14 @@ class ScraperService:
             self.jobs.finish(job)
             self.db.commit()
             self.db.refresh(job)
+            logger.info(
+                "Hoan tat scrape bai moi | source=%s id=%s found=%s new=%s failed=%s",
+                source.identifier,
+                source.id,
+                job.questions_found,
+                job.questions_new,
+                job.items_failed,
+            )
             return job, result
         except Exception as exc:
             self.db.rollback()
@@ -101,4 +121,12 @@ class ScraperService:
             self.jobs.fail(job, exc, source_id=source.id)
             self.db.commit()
             self.db.refresh(job)
+            logger.exception(
+                "Loi scrape bai moi | source=%s id=%s found=%s new=%s failed=%s",
+                source.identifier,
+                source.id,
+                job.questions_found,
+                job.questions_new,
+                job.items_failed,
+            )
             return job, result

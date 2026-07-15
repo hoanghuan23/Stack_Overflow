@@ -1,14 +1,20 @@
 from __future__ import annotations
 
+import logging
+
+from sqlalchemy import func
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.core.config import Settings, get_settings
-from app.db.models import PipelineJob, Question, SourceQuestion
+from app.db.models import PipelineJob, Question, Source, SourceQuestion
 from app.repositories.analytics_repository import AnalyticsRepository
 from app.repositories.job_repository import JobRepository
 from app.repositories.question_repository import QuestionRepository
 from app.services.stackexchange_client import StackExchangeClient, StackExchangeResult
+
+
+logger = logging.getLogger("stackoverflow_api.metrics")
 
 
 class MetricService:
@@ -35,6 +41,29 @@ class MetricService:
         try:
             due_questions = self.questions.due_for_metric_update(limit=limit)
             stack_ids = [question.stackoverflow_question_id for question in due_questions]
+            due_question_ids = [question.id for question in due_questions]
+            if due_question_ids:
+                source_counts = self.db.execute(
+                    select(
+                        Source.id,
+                        Source.identifier,
+                        func.count(SourceQuestion.question_id),
+                    )
+                    .join(SourceQuestion, SourceQuestion.source_id == Source.id)
+                    .where(SourceQuestion.question_id.in_(due_question_ids))
+                    .group_by(Source.id, Source.identifier)
+                    .order_by(Source.id)
+                )
+                for source_id, identifier, posts in source_counts:
+                    logger.info(
+                        "Bat dau cap nhat metrics | source=%s id=%s posts=%s",
+                        identifier,
+                        source_id,
+                        posts,
+                    )
+            else:
+                logger.info("Khong co metrics den han | limit=%s", limit)
+
             by_stack_id: dict[int, Question] = {
                 question.stackoverflow_question_id: question for question in due_questions
             }
@@ -66,6 +95,12 @@ class MetricService:
             self.jobs.finish(job)
             self.db.commit()
             self.db.refresh(job)
+            logger.info(
+                "Hoan tat cap nhat metrics | found=%s updated=%s failed=%s",
+                job.questions_found,
+                job.questions_updated,
+                job.items_failed,
+            )
             return job, processed, result
         except Exception as exc:
             self.db.rollback()
@@ -73,4 +108,10 @@ class MetricService:
             self.jobs.fail(job, exc)
             self.db.commit()
             self.db.refresh(job)
+            logger.exception(
+                "Loi cap nhat metrics | found=%s updated=%s failed=%s",
+                job.questions_found,
+                job.questions_updated,
+                job.items_failed,
+            )
             return job, processed, result
