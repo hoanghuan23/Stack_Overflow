@@ -37,6 +37,7 @@ class SchedulerService:
     def run_due_metrics(self, limit: int = 100) -> int | None:
         metrics = MetricService(self.db)
         if not metrics.questions.due_for_metric_update(limit=1):
+            self.db.commit()
             return None
         job, _, _ = metrics.run_due_updates(limit=limit)
         return job.id

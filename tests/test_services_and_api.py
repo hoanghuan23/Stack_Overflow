@@ -31,8 +31,8 @@ QUESTION_ITEM = {
     "view_count": 10,
     "answer_count": 0,
     "score": 1,
-    "creation_date": 1_700_000_000,
-    "last_activity_date": 1_700_000_100,
+    "creation_date": int(datetime.utcnow().timestamp()),
+    "last_activity_date": int(datetime.utcnow().timestamp()) + 100,
 }
 
 
@@ -231,6 +231,46 @@ def test_scheduler_skips_metric_job_when_no_questions_are_due(db_session):
     assert db_session.query(PipelineJob).count() == 0
 
 
+def test_metric_tracking_only_includes_questions_created_within_24_hours(db_session):
+    from app.db.models import Source
+    from app.repositories.question_repository import QuestionRepository, metric_tracking_until
+
+    source = Source(source_type="tag", identifier="python")
+    db_session.add(source)
+    db_session.flush()
+    old_created_at = datetime.utcnow() - timedelta(hours=24, minutes=1)
+    question = Question(
+        stackoverflow_question_id=79978476,
+        source_id=source.id,
+        title="Old question",
+        link="https://stackoverflow.com/questions/79978476/old-question",
+        last_activity_at=datetime.utcnow(),
+        question_created_at=old_created_at,
+        is_tracked=True,
+        next_metric_update=None,
+    )
+    db_session.add(question)
+    db_session.commit()
+
+    assert QuestionRepository(db_session).due_for_metric_update(limit=10) == []
+    assert question.is_tracked is False
+    assert question.next_metric_update is None
+
+    old_item = dict(QUESTION_ITEM)
+    old_item.update(
+        {
+            "question_id": 79978477,
+            "link": "https://stackoverflow.com/questions/79978477/old-api-question",
+            "creation_date": int(old_created_at.timestamp()),
+        }
+    )
+    api_question, _ = QuestionRepository(db_session).upsert_from_api_item(source.id, old_item)
+
+    assert api_question.is_tracked is False
+    assert api_question.tracking_until == metric_tracking_until(api_question.question_created_at)
+    assert api_question.next_metric_update is None
+
+
 def test_scrape_failure_marks_job_failed_and_logs(db_session):
     from app.db.models import Source
 
@@ -286,7 +326,7 @@ def test_metric_run_updates_question_and_snapshot(client, db_session):
     assert source.schedule_tier == 4
     assert source.next_scrape is not None
     assert source.last_scraped is not None
-    assert timedelta(minutes=20) < source.next_scrape - datetime.utcnow() < timedelta(minutes=40)
+    assert timedelta(minutes=50) < source.next_scrape - datetime.utcnow() < timedelta(minutes=70)
 
 
 def test_analytics_cache_handles_empty_source_override_and_growth(db_session):

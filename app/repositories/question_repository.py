@@ -2,10 +2,12 @@ from __future__ import annotations
 
 from datetime import datetime, timedelta
 
-from sqlalchemy import Select, func, select
+from sqlalchemy import Select, func, select, update
 from sqlalchemy.orm import Session, aliased
 
 from app.db.models import Question, QuestionMetric, QuestionTag, SourceQuestion, Tag
+
+METRIC_TRACKING_WINDOW = timedelta(hours=24)
 
 
 def unix_to_datetime(value: int | None) -> datetime | None:
@@ -37,6 +39,14 @@ def next_metric_update_for_tier(tier: str, now: datetime | None = None) -> datet
         "very_low": 720,
     }
     return base + timedelta(minutes=minutes_by_tier[tier])
+
+
+def metric_tracking_until(question_created_at: datetime) -> datetime:
+    return question_created_at + METRIC_TRACKING_WINDOW
+
+
+def should_track_metrics(question_created_at: datetime, now: datetime | None = None) -> bool:
+    return metric_tracking_until(question_created_at) > (now or datetime.utcnow())
 
 
 class QuestionRepository:
@@ -100,16 +110,37 @@ class QuestionRepository:
 
     def due_for_metric_update(self, limit: int = 100) -> list[Question]:
         now = datetime.utcnow()
+        self.deactivate_expired_metric_tracking(now)
+        created_after = now - METRIC_TRACKING_WINDOW
         stmt = (
             select(Question)
             .where(
                 Question.is_tracked == True,  # noqa: E712
+                Question.question_created_at >= created_after,
+                (Question.tracking_until == None) | (Question.tracking_until > now),  # noqa: E711
                 (Question.next_metric_update == None) | (Question.next_metric_update <= now),  # noqa: E711
             )
             .order_by(Question.next_metric_update.asc().nullsfirst(), Question.id.asc())
             .limit(limit)
         )
         return list(self.db.scalars(stmt))
+
+    def deactivate_expired_metric_tracking(self, now: datetime | None = None) -> int:
+        current_time = now or datetime.utcnow()
+        cutoff = current_time - METRIC_TRACKING_WINDOW
+        result = self.db.execute(
+            update(Question)
+            .where(
+                Question.is_tracked == True,  # noqa: E712
+                Question.question_created_at < cutoff,
+            )
+            .values(
+                is_tracked=False,
+                next_metric_update=None,
+            )
+        )
+        self.db.flush()
+        return int(result.rowcount or 0)
 
     def latest_created_at_for_source(self, source_id: int) -> datetime | None:
         return self.db.scalar(
@@ -145,12 +176,17 @@ class QuestionRepository:
         question.last_activity_at = unix_to_datetime(item.get("last_activity_date")) or question.last_activity_at
         question.question_created_at = unix_to_datetime(item.get("creation_date")) or question.question_created_at
         question.last_edited_at = unix_to_datetime(item.get("last_edit_date"))
+        now = datetime.utcnow()
+        question.tracking_until = metric_tracking_until(question.question_created_at)
+        question.is_tracked = should_track_metrics(question.question_created_at, now)
         answer_count = int(item.get("answer_count", 0))
         score = int(item.get("score", 0))
         view_count = int(item.get("view_count", 0))
         question.metric_tier = calculate_metric_tier(answer_count, score, view_count)
-        question.last_metric_update = datetime.utcnow()
-        if question.next_metric_update is None:
+        question.last_metric_update = now
+        if not question.is_tracked:
+            question.next_metric_update = None
+        elif question.next_metric_update is None:
             question.next_metric_update = next_metric_update_for_tier(
                 question.metric_tier,
                 question.last_metric_update,
