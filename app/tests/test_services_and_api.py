@@ -82,6 +82,29 @@ class TrackingStackExchangeClient(FakeStackExchangeClient):
         return StackExchangeResult(items=[], quota_remaining=299)
 
 
+class SelectiveMetricsClient(FakeStackExchangeClient):
+    def __init__(self):
+        super().__init__()
+        self.requested_question_ids: list[int] = []
+
+    def fetch_question_metrics(self, stackoverflow_question_ids: list[int]):
+        self.requested_question_ids = list(stackoverflow_question_ids)
+        items = []
+        for question_id in stackoverflow_question_ids:
+            item = dict(QUESTION_ITEM)
+            item.update(
+                {
+                    "question_id": question_id,
+                    "is_answered": True,
+                    "view_count": 5000,
+                    "answer_count": 10,
+                    "score": 20,
+                }
+            )
+            items.append(item)
+        return StackExchangeResult(items=items, quota_remaining=250)
+
+
 def test_health_and_create_sources(client, db_session):
     from app.api.sources import get_scraper_service
 
@@ -222,6 +245,47 @@ def test_scheduler_runs_due_sources_as_scrape_new_questions(db_session, monkeypa
     assert calls == [(source.id, "scrape_new_questions", True)]
 
 
+def test_scheduler_runs_due_metrics_by_source(db_session, monkeypatch):
+    from app.db.models import Source
+    from app.services.scheduler_service import SchedulerService
+
+    source_a = Source(source_type="tag", identifier="python")
+    source_b = Source(source_type="tag", identifier="fastapi")
+    source_c = Source(source_type="tag", identifier="django", is_accessible=False)
+    db_session.add_all([source_a, source_b, source_c])
+    db_session.commit()
+    calls = []
+
+    class FakeQuestionRepository:
+        def due_for_metric_update(self, limit: int, source_id: int | None = None):
+            calls.append(("due", source_id))
+            return [object()] if source_id == source_a.id else []
+
+    class FakeMetricService:
+        def __init__(self, db):
+            self.db = db
+            self.questions = FakeQuestionRepository()
+
+        def run_due_updates(self, limit: int, source_id: int | None = None):
+            calls.append(("run", source_id))
+            return (
+                PipelineJob(id=source_id + 100, job_type="update_metrics", source_id=source_id),
+                1,
+                StackExchangeResult(items=[]),
+            )
+
+    monkeypatch.setattr("app.services.scheduler_service.MetricService", FakeMetricService)
+
+    job_ids = SchedulerService(db_session).run_due_metrics_by_source()
+
+    assert job_ids == [source_a.id + 100]
+    assert calls == [
+        ("due", source_a.id),
+        ("run", source_a.id),
+        ("due", source_b.id),
+    ]
+
+
 def test_scheduler_skips_metric_job_when_no_questions_are_due(db_session):
     from app.services.scheduler_service import SchedulerService
 
@@ -269,6 +333,58 @@ def test_metric_tracking_only_includes_questions_created_within_24_hours(db_sess
     assert api_question.is_tracked is False
     assert api_question.tracking_until == metric_tracking_until(api_question.question_created_at)
     assert api_question.next_metric_update is None
+
+
+def test_metric_updates_can_be_scoped_to_a_source(db_session):
+    from app.db.models import Source
+    from app.services.metric_service import MetricService
+
+    source_a = Source(source_type="tag", identifier="python")
+    source_b = Source(source_type="tag", identifier="fastapi")
+    db_session.add_all([source_a, source_b])
+    db_session.flush()
+
+    question_a = Question(
+        stackoverflow_question_id=90000001,
+        source_id=source_a.id,
+        title="A",
+        link="https://stackoverflow.com/questions/90000001/a",
+        last_activity_at=datetime.utcnow(),
+        question_created_at=datetime.utcnow(),
+        is_tracked=True,
+        next_metric_update=None,
+    )
+    question_b = Question(
+        stackoverflow_question_id=90000002,
+        source_id=source_b.id,
+        title="B",
+        link="https://stackoverflow.com/questions/90000002/b",
+        last_activity_at=datetime.utcnow(),
+        question_created_at=datetime.utcnow(),
+        is_tracked=True,
+        next_metric_update=None,
+    )
+    db_session.add_all([question_a, question_b])
+    db_session.flush()
+    db_session.add_all(
+        [
+            SourceQuestion(source_id=source_a.id, question_id=question_a.id),
+            SourceQuestion(source_id=source_b.id, question_id=question_b.id),
+        ]
+    )
+    db_session.commit()
+
+    client = SelectiveMetricsClient()
+    job, processed, _ = MetricService(db_session, client=client).run_due_updates(
+        limit=10,
+        source_id=source_a.id,
+    )
+
+    assert job.source_id == source_a.id
+    assert processed == 1
+    assert client.requested_question_ids == [90000001]
+    assert db_session.get(Question, question_a.id).metric_tier == "hot"
+    assert db_session.get(Question, question_b.id).last_metric_update is None
 
 
 def test_scrape_failure_marks_job_failed_and_logs(db_session):

@@ -15,7 +15,7 @@ def run_scheduler_cycle() -> None:
     try:
         scheduler = SchedulerService(db)
         scheduler.run_due_sources()
-        scheduler.run_due_metrics()
+        scheduler.run_due_metrics_by_source()
     finally:
         db.close()
 

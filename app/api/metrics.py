@@ -13,9 +13,10 @@ router = APIRouter(prefix="/metrics", tags=["metrics"])
 @router.post("/due/run", response_model=MetricRunResult)
 def run_due_metrics(
     limit: int = Query(default=100, ge=1, le=100),
+    source_id: int | None = Query(default=None, ge=1),
     db: Session = Depends(get_db),
 ):
-    job, processed, result = MetricService(db).run_due_updates(limit=limit)
+    job, processed, result = MetricService(db).run_due_updates(limit=limit, source_id=source_id)
     return MetricRunResult(
         job=job,
         questions_processed=processed,

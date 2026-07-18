@@ -31,19 +31,23 @@ class MetricService:
         self.jobs = JobRepository(db)
         self.analytics = AnalyticsRepository(db)
 
-    def run_due_updates(self, limit: int = 100) -> tuple[PipelineJob, int, StackExchangeResult]:
-        job = self.jobs.start("update_metrics")
+    def run_due_updates(
+        self,
+        limit: int = 100,
+        source_id: int | None = None,
+    ) -> tuple[PipelineJob, int, StackExchangeResult]:
+        job = self.jobs.start("update_metrics", source_id=source_id)
         self.db.commit()
         self.db.refresh(job)
         result = StackExchangeResult(items=[])
         processed = 0
 
         try:
-            due_questions = self.questions.due_for_metric_update(limit=limit)
+            due_questions = self.questions.due_for_metric_update(limit=limit, source_id=source_id)
             stack_ids = [question.stackoverflow_question_id for question in due_questions]
             due_question_ids = [question.id for question in due_questions]
             if due_question_ids:
-                source_counts = self.db.execute(
+                source_query = (
                     select(
                         Source.id,
                         Source.identifier,
@@ -54,11 +58,14 @@ class MetricService:
                     .group_by(Source.id, Source.identifier)
                     .order_by(Source.id)
                 )
-                for source_id, identifier, posts in source_counts:
+                if source_id is not None:
+                    source_query = source_query.where(Source.id == source_id)
+                source_counts = self.db.execute(source_query)
+                for current_source_id, identifier, posts in source_counts:
                     logger.info(
                         "Bat dau cap nhat metrics | source=%s id=%s posts=%s",
                         identifier,
-                        source_id,
+                        current_source_id,
                         posts,
                     )
             else:

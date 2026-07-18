@@ -108,21 +108,22 @@ class QuestionRepository:
         stmt = stmt.order_by(*order_map.get(sort, order_map["created"])).limit(limit).offset(offset)
         return list(self.db.scalars(stmt))
 
-    def due_for_metric_update(self, limit: int = 100) -> list[Question]:
+    def due_for_metric_update(self, limit: int = 100, source_id: int | None = None) -> list[Question]:
         now = datetime.utcnow()
         self.deactivate_expired_metric_tracking(now)
         created_after = now - METRIC_TRACKING_WINDOW
-        stmt = (
-            select(Question)
-            .where(
-                Question.is_tracked == True,  # noqa: E712
-                Question.question_created_at >= created_after,
-                (Question.tracking_until == None) | (Question.tracking_until > now),  # noqa: E711
-                (Question.next_metric_update == None) | (Question.next_metric_update <= now),  # noqa: E711
-            )
-            .order_by(Question.next_metric_update.asc().nullsfirst(), Question.id.asc())
-            .limit(limit)
+        stmt = select(Question)
+        stmt = stmt.where(
+            Question.is_tracked == True,  # noqa: E712
+            Question.question_created_at >= created_after,
+            (Question.tracking_until == None) | (Question.tracking_until > now),  # noqa: E711
+            (Question.next_metric_update == None) | (Question.next_metric_update <= now),  # noqa: E711
         )
+        if source_id is not None:
+            stmt = stmt.join(SourceQuestion, SourceQuestion.question_id == Question.id).where(
+                SourceQuestion.source_id == source_id
+            )
+        stmt = stmt.order_by(Question.next_metric_update.asc().nullsfirst(), Question.id.asc()).limit(limit)
         return list(self.db.scalars(stmt))
 
     def deactivate_expired_metric_tracking(self, now: datetime | None = None) -> int:
