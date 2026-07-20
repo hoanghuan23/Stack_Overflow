@@ -2,6 +2,7 @@ fastapi
 httpx
 pydantic
 pytest
+python-dotenv
 requests
 sqlalchemy
 uvicorn
