@@ -115,15 +115,17 @@ class QuestionRepository:
         stmt = select(Question)
         stmt = stmt.where(
             Question.is_tracked == True,  # noqa: E712
+            Question.is_deleted == False,  # noqa: E712
             Question.question_created_at >= created_after,
             (Question.tracking_until == None) | (Question.tracking_until > now),  # noqa: E711
-            (Question.next_metric_update == None) | (Question.next_metric_update <= now),  # noqa: E711
+            Question.next_metric_update != None,  # noqa: E711
+            Question.next_metric_update <= now,
         )
         if source_id is not None:
             stmt = stmt.join(SourceQuestion, SourceQuestion.question_id == Question.id).where(
                 SourceQuestion.source_id == source_id
             )
-        stmt = stmt.order_by(Question.next_metric_update.asc().nullsfirst(), Question.id.asc()).limit(limit)
+        stmt = stmt.order_by(Question.next_metric_update.asc(), Question.id.asc()).limit(limit)
         return list(self.db.scalars(stmt))
 
     def deactivate_expired_metric_tracking(self, now: datetime | None = None) -> int:
@@ -210,12 +212,20 @@ class QuestionRepository:
         answer_count = int(item.get("answer_count", question.answer_count))
         score = int(item.get("score", question.score))
         question.last_activity_at = unix_to_datetime(item.get("last_activity_date")) or question.last_activity_at
+        question.is_deleted = False
         question.last_metric_update = datetime.utcnow()
         question.metric_tier = calculate_metric_tier(answer_count, score, view_count)
         question.next_metric_update = next_metric_update_for_tier(
             question.metric_tier, question.last_metric_update
         )
         self._record_metric(question.id, view_count, answer_count, score, job_id=job_id)
+        self.db.flush()
+        return question
+
+    def mark_metric_lookup_missing(self, question: Question) -> Question:
+        question.is_tracked = False
+        question.is_deleted = True
+        question.next_metric_update = None
         self.db.flush()
         return question
 

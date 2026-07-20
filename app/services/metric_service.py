@@ -76,14 +76,23 @@ class MetricService:
             }
             result = self.client.fetch_question_metrics(stack_ids)
             affected_question_ids: set[int] = set()
+            returned_stack_ids: set[int] = set()
             for item in result.items:
-                question = by_stack_id.get(item.get("question_id"))
+                stack_id = item.get("question_id")
+                question = by_stack_id.get(stack_id)
                 if question is None:
                     job.items_failed += 1
                     continue
+                returned_stack_ids.add(stack_id)
                 self.questions.update_metrics_from_api_item(question, item, job.id)
                 affected_question_ids.add(question.id)
                 processed += 1
+
+            for question in due_questions:
+                if question.stackoverflow_question_id in returned_stack_ids:
+                    continue
+                self.questions.mark_metric_lookup_missing(question)
+                job.items_failed += 1
 
             affected_source_ids: set[int] = set()
             if affected_question_ids:

@@ -105,6 +105,16 @@ class SelectiveMetricsClient(FakeStackExchangeClient):
         return StackExchangeResult(items=items, quota_remaining=250)
 
 
+class EmptyMetricsClient(FakeStackExchangeClient):
+    def __init__(self):
+        super().__init__()
+        self.requested_question_ids: list[int] = []
+
+    def fetch_question_metrics(self, stackoverflow_question_ids: list[int]):
+        self.requested_question_ids = list(stackoverflow_question_ids)
+        return StackExchangeResult(items=[], quota_remaining=250)
+
+
 def test_health_and_create_sources(client, db_session):
     from app.api.sources import get_scraper_service
 
@@ -335,6 +345,52 @@ def test_metric_tracking_only_includes_questions_created_within_24_hours(db_sess
     assert api_question.next_metric_update is None
 
 
+def test_metric_due_requires_scheduled_update_time(db_session):
+    from app.db.models import Source
+    from app.repositories.question_repository import QuestionRepository
+
+    now = datetime.utcnow()
+    source = Source(source_type="tag", identifier="python")
+    db_session.add(source)
+    db_session.flush()
+    unscheduled_question = Question(
+        stackoverflow_question_id=90000000,
+        source_id=source.id,
+        title="Unscheduled",
+        link="https://stackoverflow.com/questions/90000000/unscheduled",
+        last_activity_at=now,
+        question_created_at=now,
+        is_tracked=True,
+        next_metric_update=None,
+    )
+    future_question = Question(
+        stackoverflow_question_id=90000003,
+        source_id=source.id,
+        title="Future",
+        link="https://stackoverflow.com/questions/90000003/future",
+        last_activity_at=now,
+        question_created_at=now,
+        is_tracked=True,
+        next_metric_update=now + timedelta(minutes=10),
+    )
+    due_question = Question(
+        stackoverflow_question_id=90000004,
+        source_id=source.id,
+        title="Due",
+        link="https://stackoverflow.com/questions/90000004/due",
+        last_activity_at=now,
+        question_created_at=now,
+        is_tracked=True,
+        next_metric_update=now - timedelta(minutes=1),
+    )
+    db_session.add_all([unscheduled_question, future_question, due_question])
+    db_session.commit()
+
+    due_questions = QuestionRepository(db_session).due_for_metric_update(limit=10)
+
+    assert due_questions == [due_question]
+
+
 def test_metric_updates_can_be_scoped_to_a_source(db_session):
     from app.db.models import Source
     from app.services.metric_service import MetricService
@@ -352,7 +408,7 @@ def test_metric_updates_can_be_scoped_to_a_source(db_session):
         last_activity_at=datetime.utcnow(),
         question_created_at=datetime.utcnow(),
         is_tracked=True,
-        next_metric_update=None,
+        next_metric_update=datetime.utcnow() - timedelta(minutes=1),
     )
     question_b = Question(
         stackoverflow_question_id=90000002,
@@ -362,7 +418,7 @@ def test_metric_updates_can_be_scoped_to_a_source(db_session):
         last_activity_at=datetime.utcnow(),
         question_created_at=datetime.utcnow(),
         is_tracked=True,
-        next_metric_update=None,
+        next_metric_update=datetime.utcnow() - timedelta(minutes=1),
     )
     db_session.add_all([question_a, question_b])
     db_session.flush()
@@ -385,6 +441,45 @@ def test_metric_updates_can_be_scoped_to_a_source(db_session):
     assert client.requested_question_ids == [90000001]
     assert db_session.get(Question, question_a.id).metric_tier == "hot"
     assert db_session.get(Question, question_b.id).last_metric_update is None
+
+
+def test_metric_run_stops_tracking_questions_missing_from_api_response(db_session):
+    from app.db.models import Source
+    from app.services.metric_service import MetricService
+
+    now = datetime.utcnow()
+    source = Source(source_type="tag", identifier="python")
+    db_session.add(source)
+    db_session.flush()
+    question = Question(
+        stackoverflow_question_id=90000005,
+        source_id=source.id,
+        title="Missing from API",
+        link="https://stackoverflow.com/questions/90000005/missing-from-api",
+        last_activity_at=now,
+        question_created_at=now,
+        is_tracked=True,
+        next_metric_update=now - timedelta(minutes=1),
+    )
+    db_session.add(question)
+    db_session.flush()
+    db_session.add(SourceQuestion(source_id=source.id, question_id=question.id))
+    db_session.commit()
+
+    client = EmptyMetricsClient()
+    job, processed, _ = MetricService(db_session, client=client).run_due_updates(
+        limit=10,
+        source_id=source.id,
+    )
+
+    db_session.refresh(question)
+    assert client.requested_question_ids == [90000005]
+    assert job.questions_found == 1
+    assert processed == 0
+    assert job.items_failed == 1
+    assert question.is_tracked is False
+    assert question.is_deleted is True
+    assert question.next_metric_update is None
 
 
 def test_scrape_failure_marks_job_failed_and_logs(db_session):
@@ -413,7 +508,7 @@ def test_metric_run_updates_question_and_snapshot(client, db_session):
     db_session.commit()
     ScraperService(db_session, client=FakeStackExchangeClient()).scrape_source(source.id)  # type: ignore[arg-type]
     scraped_question = db_session.query(Question).one()
-    scraped_question.next_metric_update = None
+    scraped_question.next_metric_update = datetime.utcnow() - timedelta(minutes=1)
     db_session.commit()
 
     job, processed, result = MetricService(
